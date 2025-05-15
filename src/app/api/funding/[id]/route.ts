@@ -3,10 +3,10 @@ import { prisma } from '@/lib/db'
 
 export async function GET(
   request: NextRequest, 
-  { params }: { params: { id: string } }
+  context: { params: { id: string } }
 ) {
   try {
-    const id = parseInt(params.id)
+    const id = parseInt(context.params.id)
     
     const funding = await prisma.funding.findUnique({
       where: { id }
@@ -31,12 +31,11 @@ export async function GET(
 
 export async function DELETE(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  context: { params: { id: string } }
 ) {
   try {
-    const id = parseInt(params.id)
+    const id = parseInt(context.params.id)
     
-    // Check if the funding exists
     const funding = await prisma.funding.findUnique({
       where: { id }
     })
@@ -48,7 +47,6 @@ export async function DELETE(
       )
     }
     
-    // Delete the funding
     await prisma.funding.delete({
       where: { id }
     })
