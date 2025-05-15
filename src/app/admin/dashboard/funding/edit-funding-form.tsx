@@ -26,7 +26,6 @@ export function EditFundingForm({ fundingId, onSubmit, initialData }: EditFundin
 
   useEffect(() => {
     if (!initialData && fundingId) {
-      // If no initialData is provided, fetch the data based on ID
       const fetchFundingData = async () => {
         try {
           setLoading(true)
