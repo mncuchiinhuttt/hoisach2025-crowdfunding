@@ -68,7 +68,7 @@ async function createFunding(data: FormData) {
   }
 }
 
-async function updateFunding(data: FormData) {
+export async function updateFunding(data: FormData) {
   'use server'
   try {
     const id = parseInt(data.get('id') as string);
@@ -97,7 +97,7 @@ async function updateFunding(data: FormData) {
   }
 }
 
-async function deleteFunding(id: number) {
+export async function deleteFunding(id: number) {
   'use server'
   try {
     await prisma.funding.delete({
@@ -112,14 +112,10 @@ async function deleteFunding(id: number) {
   }
 }
 
-// Export the functions for use in other components
-export { updateFunding, deleteFunding }
-
 export default async function Funding() {
+  'use client'
   const fundingData = await getFundingData();
-  
   return (
-    <>
     <div className="max-w-5xl mx-auto space-y-6">
       <div className="bg-white dark:bg-zinc-900 rounded-xl shadow-sm border border-zinc-200 dark:border-zinc-800 p-6">
         <div className="flex justify-between items-center">
@@ -166,6 +162,5 @@ export default async function Funding() {
         </TableBody>
       </Table>
     </div>
-    </>
   )
 }
