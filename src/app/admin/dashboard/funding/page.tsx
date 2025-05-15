@@ -68,7 +68,7 @@ async function createFunding(data: FormData) {
   }
 }
 
-export async function updateFunding(data: FormData) {
+async function updateFunding(data: FormData) {
   'use server'
   try {
     const id = parseInt(data.get('id') as string);
@@ -97,7 +97,7 @@ export async function updateFunding(data: FormData) {
   }
 }
 
-export async function deleteFunding(id: number) {
+async function deleteFunding(id: number) {
   'use server'
   try {
     await prisma.funding.delete({
