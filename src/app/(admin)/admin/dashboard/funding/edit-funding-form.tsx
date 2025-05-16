@@ -8,7 +8,7 @@ import { DatePicker } from "./create-date-picker"
 
 interface EditFundingFormProps {
   fundingId: number
-  onSubmit: (formData: FormData) => Promise<void>
+  onSubmit: (formData: FormData) => void
   initialData?: {
     id: number
     name: string
@@ -23,6 +23,7 @@ export function EditFundingForm({ fundingId, onSubmit, initialData }: EditFundin
   const [date, setDate] = useState<Date | undefined>(initialData?.date ? new Date(initialData.date) : undefined)
   const [loading, setLoading] = useState(!initialData)
   const [data, setData] = useState(initialData)
+  const [isSubmitting, setIsSubmitting] = useState(false)
 
   useEffect(() => {
     if (!initialData && fundingId) {
@@ -46,20 +47,34 @@ export function EditFundingForm({ fundingId, onSubmit, initialData }: EditFundin
     }
   }, [fundingId, initialData])
 
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    
+    setIsSubmitting(true)
+    try {
+      const formData = new FormData(e.currentTarget)
+      await onSubmit(formData)
+    } catch (error) {
+      console.error("Failed to submit form:", error)
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
+
   if (loading && !data) {
     return <div className="text-center p-4">Loading...</div>
   }
 
   return (
-    <form id="edit-funding-form" action={onSubmit} className="space-y-4">
+    <form id="edit-funding-form" onSubmit={handleSubmit} className="space-y-4">
       <div>
         <label htmlFor="id" className="block text-sm font-medium text-zinc-700 dark:text-zinc-300">
           ID
         </label>
         <Input 
           type="text" 
-          name="id" 
-          id="id" 
+          name="id-display" 
+          id="id-display" 
           value={fundingId} 
           disabled 
           className="bg-gray-100 dark:bg-gray-800 cursor-not-allowed" 

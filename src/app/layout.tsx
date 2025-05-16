@@ -1,11 +1,14 @@
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import { Toaster } from "sonner";
+import Head from "next/head";
 import "./globals.css";
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
-  subsets: ["latin"],
+  display: 'swap',
+  subsets: ["latin", "vietnamese"],
+  weight: ['300', '400', '500', '600', '700', '800'],
 });
 
 export const metadata: Metadata = {
@@ -19,13 +22,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
+    <>
+    <Head>
+      <link rel="icon" href="/favicon.ico" />
+    </Head>
+
     <html lang="en">
       <body
-        className={`${montserrat.variable} antialiased`}
+        className={`${montserrat.className}`}
       >
         {children}
         <Toaster richColors position="top-center" />
       </body>
     </html>
+    </>
   );
 }

@@ -7,14 +7,29 @@ import { Textarea } from "@/components/ui/textarea"
 import { DatePicker } from "./create-date-picker"
 
 interface CreateFundingFormProps {
-  onSubmit: (formData: FormData) => Promise<void>
+  onSubmit: (formData: FormData) => void
 }
 
 export function CreateFundingForm({ onSubmit }: CreateFundingFormProps) {
   const [date, setDate] = useState<Date | undefined>(new Date())
+  const [isSubmitting, setIsSubmitting] = useState(false)
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    
+    setIsSubmitting(true)
+    try {
+      const formData = new FormData(e.currentTarget)
+      await onSubmit(formData)
+    } catch (error) {
+      console.error("Failed to submit form:", error)
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
 
   return (
-    <form action={onSubmit} className="space-y-4">
+    <form onSubmit={handleSubmit} className="space-y-4">
       <div>
         <label htmlFor="name" className="block text-sm font-medium text-zinc-700 dark:text-zinc-300">
           Name
@@ -51,8 +66,8 @@ export function CreateFundingForm({ onSubmit }: CreateFundingFormProps) {
       </div>
       
       <div className="flex justify-end">
-        <Button type="submit">
-          Submit
+        <Button type="submit" disabled={isSubmitting}>
+          {isSubmitting ? "Submitting..." : "Submit"}
         </Button>
       </div>
     </form>
