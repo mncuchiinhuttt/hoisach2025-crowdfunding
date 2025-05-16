@@ -21,7 +21,7 @@ async function getFundingData() {
   'use server'
   const fundingData = await prisma.funding.findMany({
     orderBy: {
-      date: 'desc'
+      id: 'asc'
     }
   });
   return fundingData;
