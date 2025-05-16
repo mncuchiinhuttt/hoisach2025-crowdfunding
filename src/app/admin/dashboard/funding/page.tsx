@@ -10,6 +10,7 @@ import type { Metadata } from 'next'
 import { prisma } from "@/lib/db"
 import { AddFundingDialog } from "./add-funding-dialog"
 import { EditFundingDialog } from "./edit-funding-dialog"
+import { revalidatePath } from 'next/cache';
 
 export const metadata: Metadata = {
   title: 'Funding Overview | Admin',
@@ -65,50 +66,8 @@ async function createFunding(data: FormData) {
   } catch (error) {
     console.error('Error creating funding:', error);
     throw new Error('Failed to create funding entry');
-  }
-}
-
-async function updateFunding(data: FormData) {
-  'use server'
-  try {
-    const id = parseInt(data.get('id') as string);
-    const name = data.get('name') as string;
-    const dateStr = data.get('date') as string;
-    const phone = data.get('phone') as string;
-    const amount = parseInt(data.get('amount') as string);
-    const notes = data.get('notes') as string || '';
-    const date = new Date(dateStr);
-    
-    await prisma.funding.update({
-      where: {
-        id: id
-      },
-      data: {
-        name,
-        date,
-        phone,
-        amount,
-        notes,
-      },
-    });
-  } catch (error) {
-    console.error('Error updating funding:', error);
-    throw new Error('Failed to update funding entry');
-  }
-}
-
-async function deleteFunding(id: number) {
-  'use server'
-  try {
-    await prisma.funding.delete({
-      where: {
-        id: id
-      }
-    });
-    return { success: true };
-  } catch (error) {
-    console.error('Error deleting funding:', error);
-    throw new Error('Failed to delete funding entry');
+  } finally {
+    revalidatePath('/admin/dashboard/funding');
   }
 }
 
