@@ -21,7 +21,7 @@ async function getFundingData() {
   'use server'
   const fundingData = await prisma.funding.findMany({
     orderBy: {
-      id: 'asc'
+      date: 'desc'
     }
   });
   return fundingData;
@@ -35,6 +35,48 @@ async function getFundingById(id: number) {
     }
   });
   return funding;
+}
+
+async function updateFunding(data: FormData) {
+  'use server'
+  try {
+    const id = parseInt(data.get('id') as string);
+    const name = data.get('name') as string;
+    const dateStr = data.get('date') as string;
+    const phone = data.get('phone') as string;
+    const amount = parseInt(data.get('amount') as string);
+    const notes = data.get('notes') as string || '';
+    
+    await prisma.funding.update({
+      where: { id },
+      data: {
+        name,
+        date: new Date(dateStr),
+        phone,
+        amount,
+        notes,
+      },
+    });
+  } catch (error) {
+    console.error('Error updating funding:', error);
+    throw new Error('Failed to update funding entry');
+  } finally {
+    revalidatePath('/admin/dashboard/funding');
+  }
+}
+
+async function deleteFunding(id: number) {
+  'use server'
+  try {
+    await prisma.funding.delete({
+      where: { id }
+    });
+  } catch (error) {
+    console.error('Error deleting funding:', error);
+    throw new Error('Failed to delete funding entry');
+  } finally {
+    revalidatePath('/admin/dashboard/funding');
+  }
 }
 
 function displayAmount(amount: number) {
@@ -72,8 +114,8 @@ async function createFunding(data: FormData) {
 }
 
 export default async function Funding() {
-  'use client'
   const fundingData = await getFundingData();
+  
   return (
     <div className="max-w-5xl mx-auto space-y-6">
       <div className="bg-white dark:bg-zinc-900 rounded-xl shadow-sm border border-zinc-200 dark:border-zinc-800 p-6">
@@ -86,7 +128,7 @@ export default async function Funding() {
               Manage your funding data here.
             </p>
           </div>
-          <AddFundingDialog createFunding={createFunding} />
+          <AddFundingDialog />
         </div>
       </div>
 

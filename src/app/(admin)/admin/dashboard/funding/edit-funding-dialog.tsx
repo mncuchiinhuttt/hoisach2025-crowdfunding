@@ -12,8 +12,9 @@ import {
 import { Button } from "@/components/ui/button"
 import { Edit, Trash2 } from "lucide-react"
 import { EditFundingForm } from "./edit-funding-form"
-import { useEffect, useState } from "react"
+import { useEffect, useState, useTransition } from "react"
 import { toast } from "sonner"
+import { useRouter } from "next/navigation"
 
 interface EditFundingDialogProps {
   fundingId: number
@@ -24,45 +25,48 @@ export function EditFundingDialog({ fundingId }: EditFundingDialogProps) {
   const [initialData, setInitialData] = useState<any>(null)
   const [loading, setLoading] = useState(false)
   const [deleting, setDeleting] = useState(false)
+  const router = useRouter()
+  const [isPending, startTransition] = useTransition()
 
   const handleDelete = async () => {
     if (!confirm("Are you sure you want to delete this funding entry? This action cannot be undone.")) {
       return;
     }
     
-    setDeleting(true);
+    setDeleting(true)
     try {
       const response = await fetch(`/api/funding/${fundingId}`, {
         method: 'DELETE',
-      });
+      })
 
-      toast.success('Funding entry deleted successfully', {
-        duration: 3000,
-        description: 'The funding entry has been removed.',
-      });
-      
       if (response.ok) {
-        setOpen(false);
-        window.location.reload();
+        toast.success('Funding entry deleted successfully', {
+          duration: 3000,
+          description: 'The funding entry has been removed.',
+        })
+        setOpen(false)
+        // Refresh the data instead of reloading the page
+        startTransition(() => {
+          router.refresh()
+        })
       } else {
-        const error = await response.json();
-        console.error('Failed to delete funding:', error);
+        const error = await response.json()
+        console.error('Failed to delete funding:', error)
         toast.error('Failed to delete funding entry', {
           description: error.message ?? 'An error occurred while deleting the funding entry.',
           duration: 3000,
-        });
-        alert('Failed to delete funding entry.');
+        })
       }
     } catch (error) {
-      console.error('Error deleting funding:', error);
+      console.error('Error deleting funding:', error)
       toast.error('An error occurred while deleting the funding entry', {
         description: 'Please try again later.',
         duration: 3000,
-      });
+      })
     } finally {
-      setDeleting(false);
+      setDeleting(false)
     }
-  };
+  }
 
   useEffect(() => {
     if (open && fundingId && !initialData) {
@@ -119,7 +123,10 @@ export function EditFundingDialog({ fundingId }: EditFundingDialogProps) {
                       duration: 3000,
                       description: 'The funding entry has been updated.',
                     });
-                    window.location.reload();
+                    // Refresh the data instead of reloading the page
+                    startTransition(() => {
+                      router.refresh()
+                    })
                   } else {
                     console.error('Failed to update funding');
                     toast.error('Failed to update funding entry', {

@@ -11,7 +11,9 @@ export default function MainLayout({
 }>) {
   return (
     <div className="min-h-screen flex flex-col">
-      <NavigationBar />
+      <div className="sticky top-0 z-50">
+        <NavigationBar />
+      </div>
       <main className="flex-1">{children}</main>
       <Footer />
     </div>
