@@ -13,6 +13,7 @@ import { Button } from "@/components/ui/button"
 import { Edit, Trash2 } from "lucide-react"
 import { EditFundingForm } from "./edit-funding-form"
 import { useEffect, useState } from "react"
+import { toast } from "sonner"
 
 interface EditFundingDialogProps {
   fundingId: number
@@ -34,6 +35,11 @@ export function EditFundingDialog({ fundingId }: EditFundingDialogProps) {
       const response = await fetch(`/api/funding/${fundingId}`, {
         method: 'DELETE',
       });
+
+      toast.success('Funding entry deleted successfully', {
+        duration: 3000,
+        description: 'The funding entry has been removed.',
+      });
       
       if (response.ok) {
         setOpen(false);
@@ -41,11 +47,18 @@ export function EditFundingDialog({ fundingId }: EditFundingDialogProps) {
       } else {
         const error = await response.json();
         console.error('Failed to delete funding:', error);
+        toast.error('Failed to delete funding entry', {
+          description: error.message ?? 'An error occurred while deleting the funding entry.',
+          duration: 3000,
+        });
         alert('Failed to delete funding entry.');
       }
     } catch (error) {
       console.error('Error deleting funding:', error);
-      alert('An error occurred while trying to delete the funding entry.');
+      toast.error('An error occurred while deleting the funding entry', {
+        description: 'Please try again later.',
+        duration: 3000,
+      });
     } finally {
       setDeleting(false);
     }
@@ -67,8 +80,7 @@ export function EditFundingDialog({ fundingId }: EditFundingDialogProps) {
           setLoading(false)
         }
       }
-      
-      fetchData()
+      fetchData();
     }
   }, [fundingId, open, initialData])
 
@@ -103,12 +115,24 @@ export function EditFundingDialog({ fundingId }: EditFundingDialogProps) {
                   
                   if (response.ok) {
                     setOpen(false);
-                    window.location.reload(); 
+                    toast.success('Funding entry updated successfully', {
+                      duration: 3000,
+                      description: 'The funding entry has been updated.',
+                    });
+                    window.location.reload();
                   } else {
                     console.error('Failed to update funding');
+                    toast.error('Failed to update funding entry', {
+                      description: 'An error occurred while updating the funding entry.',
+                      duration: 3000,
+                    });
                   }
                 } catch (error) {
                   console.error('Error updating funding:', error);
+                  toast.error('An error occurred while updating the funding entry', {
+                    description: 'An error occurred while updating the funding entry.',
+                    duration: 3000,
+                  })
                 }
               }} 
               initialData={initialData}
