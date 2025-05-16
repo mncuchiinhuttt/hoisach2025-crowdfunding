@@ -20,37 +20,42 @@ export default function NewsPage() {
 	{
 	  title: "Hội sách 'Mở Hỏi Mở' dự kiến hút hàng nghìn bạn trẻ",
 	  source: "Báo VNExpress",
-	  link: "#",
+	  link: "https://vnexpress.net/hoi-sach-mo-hoi-mo-du-kien-hut-hang-nghin-ban-tre-4629314.html",
 	},
 	{
 	  title: "4.000 đầu sách phục vụ bạn trẻ trong hội sách 'Mở Hỏi Mở'",
 	  source: "Báo Phụ Nữ",
-	  link: "#",
+	  link: "https://www.phunuonline.com.vn/4-000-dau-sach-phuc-vu-ban-tre-trong-hoi-sach-mo-hoi-mo-a1496406.html",
 	},
 	{
 	  title: "Hơn 4.000 đầu sách dành cho teen tại Bến Tre",
 	  source: "Báo Mặt Trời",
-	  link: "#",
+	  link: "https://muctim.tuoitre.vn/hon-4000-dau-sach-danh-cho-teen-tai-hoi-sach-mo-hoi-mo-101230714151246103.htm",
+	},
+	{
+		title: "Hội sách cho bạn trẻ Bến Tre",
+		source: "Znews",
+		link: "https://znews.vn/hoi-sach-cho-ban-tre-ben-tre-post1446305.html",
 	},
 	{
 	  title: "Ngày hội sách Mở Hỏi Mở và cuộc thi 'Tôm sách' dành cho học sinh Bến Tre",
 	  source: "Báo Thanh Niên",
-	  link: "#",
+	  link: "https://thanhnien.vn/ngay-hoi-sach-mo-hoi-mo-va-cuoc-thi-tom-sach-danh-cho-hoc-sinh-ben-tre-185230718154252475.htm",
 	},
 	{
 	  title: "Phát động cuộc thi 'Tôm sách' cho thí sinh Bến Tre",
 	  source: "Báo Tiền Phong",
-	  link: "#",
+	  link: "https://svvn.tienphong.vn/phat-dong-cuoc-thi-tom-sach-cho-thi-sinh-ben-tre-post1552408.tpo",
 	},
 	{
 	  title: "Nhiều hoạt động thiết thực tại Hội sách Mở hỏi mở",
 	  source: "Báo Đồng Khởi",
-	  link: "#",
+	  link: "https://baodongkhoi.vn/nhieu-hoat-dong-thiet-thuc-tai-hoi-sach-mo-hoi-mo-16072023-a117157.html",
 	},
 	{
 	  title: "TỔ CHỨC HỘI SÁCH MỞ HỎI MỞ - SỰ KIỆN KHUYẾN ĐỌC CHO BẠN ĐỌC TRẺ",
 	  source: "Truyền hình Bến Tre",
-	  link: "#",
+	  link: "https://www.youtube.com/watch?v=4m8k3gFNAMw",
 	},
   ];
 
