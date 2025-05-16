@@ -10,13 +10,26 @@ const compat = new FlatCompat({
 });
 
 const eslintConfig = [
+  ...compat.extends("next/core-web-vitals", "next/typescript"),
   ...compat.config({
-    extends: ['next'],
-    rules: {
-      'react/no-unescaped-entities': 'off',
-      '@next/next/no-page-custom-font': 'off',
+    files: ["*.ts", "*.tsx"],
+    languageOptions: {
+      parser: "@typescript-eslint/parser",
+      parserOptions: {
+        project: "./tsconfig.json",
+        tsconfigRootDir: __dirname,
+        sourceType: "module",
+      },
     },
-  }),
-]
+    plugins: {
+      "@typescript-eslint": require("@typescript-eslint/eslint-plugin"),
+    },
+    rules: {
+      "@typescript-eslint/no-unused-vars": "warn",
+      "@typescript-eslint/no-explicit-any": "off",
+    },
+    excludeFiles: ["**/node_modules/**", "**/.next/**"],
+  })
+];
 
 export default eslintConfig;
