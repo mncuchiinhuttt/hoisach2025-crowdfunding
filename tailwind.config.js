@@ -13,10 +13,31 @@ module.exports = {
         sans: ['var(--font-montserrat)'],
         montserrat: ['var(--font-montserrat)'],
       },
-      colors: {
-        'emerald-700': '#10B981',
+      animation: {
+        marquee: 'marquee 30s linear infinite',
+        'marquee-reverse': 'marquee-reverse 30s linear infinite',
+      },
+      keyframes: {
+        marquee: {
+          '0%': { transform: 'translateX(0%)' },
+          '100%': { transform: 'translateX(-150%)' },
+        },
+        'marquee-reverse': {
+          '0%': { transform: 'translateX(-150%)' },
+          '100%': { transform: 'translateX(0%)' },
+        },
       },
     },
   },
-  plugins: [],
+  variants: {
+    extend: {
+      animation: ['hover', 'focus'],
+    },
+  },
+  plugins: [
+    function({ addVariant }) {
+      addVariant('hover', '&:hover');
+      addVariant('pause-animation', '.hover\\:pause-animation:hover &');
+    },
+  ],
 }
