@@ -17,28 +17,33 @@ import { ListItem } from "@/components/ui/list-item";
 export function NavigationBar() {
   const aboutItems = [
     {
-      title: "Lịch sử",
-      href: "/about/history",
-      description: "Tìm hiểu về lịch sử hình thành và phát triển của chúng tôi",
+      title: "Giới thiệu",
+      href: "/about/introduction",
+      description: "Câu chuyện về “Mơ Hỏi Mở” - nơi những ý tưởng be bé được ươm mầm, để lớn lên thành những điều thật xinh",
     },
     {
-      title: "Sứ mệnh",
-      href: "/about/mission",
-      description: "Sứ mệnh và tầm nhìn của chúng tôi trong tương lai",
+      title: "Hành trình 10 năm",
+      href: "/about/journey",
+      description: "Cùng nhìn lại hành trình 10 năm đầy phép màu đã tạo nên “Mơ Hỏi Mở” như ngày hôm nay",
     },
   ];
 
   const activityItems = [
     {
-      title: "Hiện tại",
-      href: "/activities/current",
-      description: "Các hoạt động đang diễn ra",
+      title: "Lịch sử sự kiện",
+      href: "/activities/history",
+      description: "Theo dấu lịch trình để không bỏ lỡ bất kỳ \“kho báu\" nào trong chuyến phiêu lưu cùng “Mơ Hỏi Mở” nhé",
     },
     {
-      title: "Đã qua",
-      href: "/activities/past",
-      description: "Các hoạt động đã hoàn thành",
+      title: "Sơ đồ tổng quan",
+      href: "/activities/overview",
+      description: "Bản đồ này sẽ đưa bạn ghé thăm từng góc nhỏ thân thương của Mơ Hỏi Mở",
     },
+    {
+      title: "Đêm nhạc",
+      href: "/activities/music-night",
+      description: "Chưa thấy full kịch bản chưa biét ghi gì",
+    }
   ];
 
   return (
