@@ -98,7 +98,7 @@ export default function Introduction() {
               Dự án Hội sách Mơ Hỏi Mở là một dự án phi lợi nhuận được ươm mầm từ tình yêu sách và mong muốn lan toả niềm vui đọc. Tụi mình đã tạo ra một không gian ấm áp, nơi mọi người có thể gặp gỡ và sẻ chia qua những trang sách đầy yêu thương. Vì tụi mình tin rằng, việc đọc có thể bắt đầu thật tự nhiên, nhẹ nhàng và trở thành thói quen bền vững - nhất là với các bạn trẻ.
             </p>
           </div>
-          <div className="relative h-full w-full ml-[10%]">
+          <div className="relative h-full w-full ml-[10%] items-center">
             <img 
               src="/about_introduction_1.png" 
               alt="Hội sách Mở Hỏi Mở" 
@@ -107,9 +107,9 @@ export default function Introduction() {
         </div>
       </div>
 
-      <div className="w-full bg-[#FFF5E9] py-16">
+      <div className="w-full bg-[#FFFCE7] py-16">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16 text-[#76323F]">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16 text-[#5D4037]">
             <div className="flex flex-col items-center">
               <h3 className="text-7xl font-black">4+</h3>
               <p className="text-2xl mt-2">mùa hội sách</p>
