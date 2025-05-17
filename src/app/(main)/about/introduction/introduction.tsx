@@ -148,7 +148,7 @@ export default function Introduction() {
               <img src="/logo1_4.png" alt="BizEduco" className="scale-170 h-24 object-contain" />
             </div>
             <div className="flex-shrink-0">
-              <img src="/logo1_5.png" alt="Cham Cafe" className="h-24 object-contain" />
+              <img src="/logo1_5.png" alt="Cham Cafe" className="scale-170 h-24 object-contain" />
             </div>
             <div className="flex-shrink-0">
               <img src="/logo1_6.png" alt="VP Milk" className="h-24 object-contain" />
@@ -160,7 +160,7 @@ export default function Introduction() {
               <img src="/logo1_8.png" alt="Tergus" className="h-24 object-contain" />
             </div>
             <div className="flex-shrink-0">
-              <img src="/logo1_9.png" alt="Sense City" className="scale-170 h-24 object-contain" />
+              <img src="/logo1_9.png" alt="Sense City" className="h-24 object-contain" />
             </div>
             <div className="flex-shrink-0">
               <img src="/logo1_10.png" alt="Saigon Tam Duc" className="h-24 object-contain" />
@@ -178,7 +178,7 @@ export default function Introduction() {
               <img src="/logo1_4.png" alt="BizEduco" className="scale-170 h-24 object-contain" />
             </div>
             <div className="flex-shrink-0">
-              <img src="/logo1_5.png" alt="Cham Cafe" className="h-24 object-contain" />
+              <img src="/logo1_5.png" alt="Cham Cafe" className="scale-170 h-24 object-contain" />
             </div>
             <div className="flex-shrink-0">
               <img src="/logo1_6.png" alt="VP Milk" className="h-24 object-contain" />
@@ -190,7 +190,7 @@ export default function Introduction() {
               <img src="/logo1_8.png" alt="Tergus" className="h-24 object-contain" />
             </div>
             <div className="flex-shrink-0">
-              <img src="/logo1_9.png" alt="Sense City" className="scale-170 h-24 object-contain" />
+              <img src="/logo1_9.png" alt="Sense City" className="h-24 object-contain" />
             </div>
             <div className="flex-shrink-0">
               <img src="/logo1_10.png" alt="Saigon Tam Duc" className="h-24 object-contain" />
@@ -199,13 +199,13 @@ export default function Introduction() {
 
           <div className="flex items-center space-x-12 animate-marquee-reverse hover:pause-animation will-change-transform mt-12">
             <div className="flex-shrink-0">
-              <img src="/logo2_1.png" alt="Partner 1" className="h-24 object-contain" />
+              <img src="/logo2_10.png" alt="Partner 10" className="h-24 object-contain" />
             </div>
             <div className="flex-shrink-0">
-              <img src="/logo2_2.png" alt="Partner 2" className="h-24 object-contain" />
+              <img src="/logo2_8.png" alt="Partner 8" className="h-24 object-contain" />
             </div>
             <div className="flex-shrink-0">
-              <img src="/logo2_3.png" alt="Partner 3" className="scale-350 h-24 object-contain" />
+              <img src="/logo2_6.png" alt="Partner 6" className="scale-150 h-24 object-contain" />
             </div>
             <div className="flex-shrink-0">
               <img src="/logo2_4.png" alt="Partner 4" className="scale-130 h-24 object-contain" />
@@ -214,28 +214,28 @@ export default function Introduction() {
               <img src="/logo2_5.png" alt="Partner 5" className="scale-130 h-24 object-contain" />
             </div>
             <div className="flex-shrink-0">
-              <img src="/logo2_6.png" alt="Partner 6" className="scale-150 h-24 object-contain" />
+              <img src="/logo2_3.png" alt="Partner 3" className="scale-350 h-24 object-contain" />
+            </div>
+            <div className="flex-shrink-0">
+              <img src="/logo2_2.png" alt="Partner 2" className="h-24 object-contain" />
+            </div>
+            <div className="flex-shrink-0">
+              <img src="/logo2_1.png" alt="Partner 1" className="h-24 object-contain" />
             </div>
             <div className="flex-shrink-0">
               <img src="/logo2_7.png" alt="Partner 7" className="h-24 object-contain" />
-            </div>
-            <div className="flex-shrink-0">
-              <img src="/logo2_8.png" alt="Partner 8" className="h-24 object-contain" />
             </div>
             <div className="flex-shrink-0">
               <img src="/logo2_9.png" alt="Partner 9" className="h-24 object-contain" />
             </div>
             <div className="flex-shrink-0">
               <img src="/logo2_10.png" alt="Partner 10" className="h-24 object-contain" />
-            </div>            
-            <div className="flex-shrink-0">
-              <img src="/logo2_1.png" alt="Partner 1" className="h-24 object-contain" />
             </div>
             <div className="flex-shrink-0">
-              <img src="/logo2_2.png" alt="Partner 2" className="h-24 object-contain" />
+              <img src="/logo2_8.png" alt="Partner 8" className="h-24 object-contain" />
             </div>
             <div className="flex-shrink-0">
-              <img src="/logo2_3.png" alt="Partner 3" className="scale-350 h-24 object-contain" />
+              <img src="/logo2_6.png" alt="Partner 6" className="scale-150 h-24 object-contain" />
             </div>
             <div className="flex-shrink-0">
               <img src="/logo2_4.png" alt="Partner 4" className="scale-130 h-24 object-contain" />
@@ -244,19 +244,19 @@ export default function Introduction() {
               <img src="/logo2_5.png" alt="Partner 5" className="scale-130 h-24 object-contain" />
             </div>
             <div className="flex-shrink-0">
-              <img src="/logo2_6.png" alt="Partner 6" className="scale-150 h-24 object-contain" />
+              <img src="/logo2_3.png" alt="Partner 3" className="scale-350 h-24 object-contain" />
+            </div>
+            <div className="flex-shrink-0">
+              <img src="/logo2_2.png" alt="Partner 2" className="h-24 object-contain" />
+            </div>
+            <div className="flex-shrink-0">
+              <img src="/logo2_1.png" alt="Partner 1" className="h-24 object-contain" />
             </div>
             <div className="flex-shrink-0">
               <img src="/logo2_7.png" alt="Partner 7" className="h-24 object-contain" />
             </div>
             <div className="flex-shrink-0">
-              <img src="/logo2_8.png" alt="Partner 8" className="h-24 object-contain" />
-            </div>
-            <div className="flex-shrink-0">
               <img src="/logo2_9.png" alt="Partner 9" className="h-24 object-contain" />
-            </div>
-            <div className="flex-shrink-0">
-              <img src="/logo2_10.png" alt="Partner 10" className="h-24 object-contain" />
             </div>
           </div>
         </div>
