@@ -62,13 +62,13 @@ export default function NewsPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#FFFCE7] to-white font-montserrat">
       <div className="container mx-auto py-10 px-4">
-        <h1 className="text-4xl font-bold text-orange-400 mb-8">TIN TỨC & CẬP NHẬT</h1>
+        <h1 className="text-7xl font-black text-[#F5AF28] mb-8">TIN TỨC & CẬP NHẬT</h1>
         
         <div className="grid gap-4">
           {newsItems.map((item, index) => (
             <div 
               key={index} 
-              className="bg-gradient-to-r bg-blue-50 p-4 rounded-md flex justify-between items-center"
+              className="bg-gradient-to-r bg-[#E4F7FF] p-4 rounded-md flex justify-between items-center"
             >
               <div className="flex-1">
                 <h2 className="text-lg font-semibold mb-1">{item.title}</h2>
@@ -76,7 +76,7 @@ export default function NewsPage() {
               </div>
               
               <Button
-                className="text-white bg-blue-400 hover:bg-blue-500 focus:ring-4 focus:ring-blue-300 rounded-md px-4 py-2"
+                className="text-white bg-[#4D99D2] hover:bg-[#13609A] focus:ring-4 focus:ring-[#13609A] rounded-md px-4 py-2"
                 asChild
               >
                 <Link href={item.link}>

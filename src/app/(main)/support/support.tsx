@@ -109,7 +109,7 @@ export default function Support({
             </div>
             
             {!isLetterExpanded && (
-              <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent"></div>
+              <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#fffffb] to-transparent"></div>
             )}
           </div>
           
@@ -125,7 +125,7 @@ export default function Support({
         </div>
       </div>
       
-      <div className="w-full py-16 bg-gradient-to-b from-white to-[#f0f9ff] via-[#f7fcff]">
+      <div className="w-full py-16 bg-gradient-to-b from-white to-[#E4F7FF] via-[#f7fcff]">
         <div className="max-w-7xl mx-auto px-4">
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-center text-[#F5AF28] mb-14">
             CÁCH THỨC ĐÓNG GÓP
@@ -188,7 +188,7 @@ export default function Support({
                   <Button
                     className="bg-[#00724D] text-white hover:bg-[#005f3d] rounded-full px-4 py-2 font-semibold"
                     onClick={() => {
-                      window.open("https://docs.google.com/spreadsheets/d/1v0gk2r7x4q3c5z6f8e9g3h8j8g/edit#gid=0", "_blank");
+                      window.open("https://docs.google.com/spreadsheets/d/12CWJ6RBqzPvYFrBQW0cDdj6mFAX3qP67Ogn2LH1pDIQ/edit?gid=0#gid=0", "_blank");
                     }}
                   >
                     Xem tại đây
@@ -207,18 +207,15 @@ export default function Support({
               </div>
             </div>
 
-            <div className="lg:w-2/5 flex items-center justify-center p-4">
-              <div className="relative">
-                <div className="absolute -inset-4 rounded-full blur-lg"></div>
-                <Image 
-                  src="/support_1.png" 
-                  alt="Ủng Hộ Mở Hỏi Mở" 
-                  width={500} 
-                  height={400}
-                  className="object-contain relative rounded-lg"
-                  priority
-                />
-              </div>
+            <div className="lg:w-2/5 flex items-end justify-center mt-auto">
+              <Image 
+                src="/support_1.png" 
+                alt="Ủng Hộ Mở Hỏi Mở" 
+                width={500} 
+                height={400}
+                className="object-contain relative rounded-lg"
+                priority
+              />
             </div>
           </div>
         </div>
