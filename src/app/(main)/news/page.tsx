@@ -4,9 +4,9 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Tin tức & Cập nhật | Mở Hỏi Mở 2025 - CrowdFunding",
-  keywords: ["Mở Hỏi Mở", "CrowdFunding", "2025", "Tin tức", "Cập nhật"],
-  description: "Tin tức và cập nhật mới nhất từ Mở Hỏi Mở 2025 - CrowdFunding",
+  title: "Tin tức & Cập nhật | Mơ Hỏi Mở 2025 - CrowdFunding",
+  keywords: ["Mơ Hỏi Mở", "CrowdFunding", "2025", "Tin tức", "Cập nhật"],
+  description: "Tin tức và cập nhật mới nhất từ Mơ Hỏi Mở 2025 - CrowdFunding",
 };
 
 interface NewsItem {

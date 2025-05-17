@@ -1,9 +1,9 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Hoạt động | Mở Hỏi Mở 2025 - CrowdFunding",
-  keywords: ["Mở Hỏi Mở", "CrowdFunding", "2025", "Hoạt động"],
-  description: "Hoạt động của Mở Hỏi Mở 2025 - CrowdFunding",
+  title: "Hành trình 10 năm | Mơ Hỏi Mở 2025 - CrowdFunding",
+  keywords: ["Mơ Hỏi Mở", "CrowdFunding", "2025", "Hành trình 10 năm"],
+  description: "Hành trình 10 năm của Mơ Hỏi Mở 2025 - CrowdFunding",
 }
 
 export default function ActivitiesPage() {

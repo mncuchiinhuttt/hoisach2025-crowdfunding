@@ -4,9 +4,9 @@ import Support from "./support";
 import { Skeleton } from "@/components/ui/skeleton";
 
 export const metadata: Metadata = {
-  title: "Ủng Hộ | Mở Hỏi Mở 2025 - CrowdFunding",
-  keywords: ["Mở Hỏi Mở", "CrowdFunding", "2025", "Ủng Hộ"],
-  description: "Ủng Hộ Mở Hỏi Mở 2025 - CrowdFunding",
+  title: "Ủng Hộ | Mơ Hỏi Mở 2025 - CrowdFunding",
+  keywords: ["Mơ Hỏi Mở", "CrowdFunding", "2025", "Ủng Hộ"],
+  description: "Ủng Hộ Mơ Hỏi Mở 2025 - CrowdFunding",
 };
 
 async function getSupportData() {

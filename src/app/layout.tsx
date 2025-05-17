@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import { Toaster } from "sonner";
-import { Suspense } from "react";
 import Head from "next/head";
 import "./globals.css";
 
@@ -13,15 +12,15 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Mở Hỏi Mở 2025 - CrowdFunding",
+  title: "Mơ Hỏi Mở 2025 - CrowdFunding",
   keywords: [
-    "Mở Hỏi Mở",
+    "Mơ Hỏi Mở",
     "CrowdFunding",
     "2025",
-    "Mở Hỏi Mở 2025",
-    "Mở Hỏi Mở 2025 - CrowdFunding",
+    "Mơ Hỏi Mở 2025",
+    "Mơ Hỏi Mở 2025 - CrowdFunding",
   ],
-  description: "Mở Hỏi Mở 2025 - CrowdFunding",
+  description: "Mơ Hỏi Mở 2025 - CrowdFunding",
 };
 
 export default function RootLayout({
