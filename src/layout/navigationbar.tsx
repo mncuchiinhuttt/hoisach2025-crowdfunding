@@ -30,8 +30,8 @@ export function NavigationBar() {
 
   const activityItems = [
     {
-      title: "Lịch sử sự kiện",
-      href: "/activities/history",
+      title: "Lịch trình sự kiện",
+      href: "/activities/schedule",
       description: "Theo dấu lịch trình để không bỏ lỡ bất kỳ \“kho báu\" nào trong chuyến phiêu lưu cùng “Mơ Hỏi Mở” nhé",
     },
     {
