@@ -5,9 +5,9 @@ import { Suspense } from "react";
 import { Skeleton } from "@/components/ui/skeleton";
 
 export const metadata: Metadata = {
-  title: "Home | Mở Hỏi Mở 2025 - CrowdFunding",
-  keywords: ["Mở Hỏi Mở", "CrowdFunding", "2025"],
-  description: "Mở Hỏi Mở 2025 - CrowdFunding",
+  title: "Liên hệ | Mơ Hỏi Mở 2025 - CrowdFunding",
+  keywords: ["Mơ Hỏi Mở", "CrowdFunding", "2025"],
+  description: "Mơ Hỏi Mở 2025 - CrowdFunding",
 }
 
 export default function Home() {
