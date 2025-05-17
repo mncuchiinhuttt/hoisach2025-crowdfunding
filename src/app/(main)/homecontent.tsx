@@ -20,8 +20,7 @@ export default function HomeContent() {
       <section className="w-full max-w-7xl px-4 pt-16 text-center">
         <div className="p-12">
           <h1 className="text-4xl mb-12">
-            Để hành trình "Mở Hỏi Mở" tiếp tục lan tỏa, tụi mình rất cần sự góp tay của bạn. 
-            Một chút yêu thương, một chút đồng hành, cũng đủ để câu chuyện này được viết tiếp.
+            Để hành trình “Mơ Hỏi Mở” tiếp tục lan tỏa, tụi mình rất cần sự góp tay của bạn. Một chút yêu thương, một chút đồng hành, cũng đủ để câu chuyện này được viết tiếp.
           </h1>
           <Button
           variant="default"
