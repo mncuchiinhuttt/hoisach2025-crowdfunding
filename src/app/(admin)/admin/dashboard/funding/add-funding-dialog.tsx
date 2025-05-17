@@ -22,7 +22,6 @@ export function AddFundingDialog() {
 
   const handleSubmit = async (formData: FormData) => {
     try {
-      // Submit the form data to the API
       const name = formData.get('name') as string
       const dateStr = formData.get('date') as string
       const phone = formData.get('phone') as string
@@ -49,7 +48,6 @@ export function AddFundingDialog() {
           duration: 3000,
           description: 'The funding entry has been added.',
         })
-        // Refresh the data instead of reloading the page
         startTransition(() => {
           router.refresh()
         })
