@@ -49,7 +49,7 @@ export default function Introduction() {
 
   return (
     <div className="flex flex-col items-center min-h-screen bg-white text-black dark:bg-zinc-900 dark:text-white">
-      <div className="w-full mx-auto mb-6">
+      <div className="w-full mx-auto mb-4">
         <div className="relative overflow-hidden shadow-xl">
           <video 
             ref={videoRef}
@@ -91,7 +91,7 @@ export default function Introduction() {
         </div>
       </div>
       
-      <div className="container max-w-7xl mx-auto px-4 py-12">
+      <div className="container max-w-7xl mx-auto px-4 py-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
           <div className="prose prose-lg dark:prose-invert">
             <p className="text-2xl leading-relaxed scale-110 text-justify">

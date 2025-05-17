@@ -17,23 +17,23 @@ export default function HomeContent() {
           <p className="text-gray-400">Từ từ đợi có cái poster ròi thêm dô!!!</p>
         </div>
       </section>
-      <section className="w-full max-w-7xl px-4 pt-16 text-center">
+      <section className="w-full max-w-7xl px-4 pt-16 text-center relative z-10">
         <div className="p-12">
           <h1 className="text-4xl mb-12">
-            Để hành trình “Mơ Hỏi Mở” tiếp tục lan tỏa, tụi mình rất cần sự góp tay của bạn. Một chút yêu thương, một chút đồng hành, cũng đủ để câu chuyện này được viết tiếp.
+            Để hành trình "Mơ Hỏi Mở" tiếp tục lan tỏa, tụi mình rất cần sự góp tay của bạn. Một chút yêu thương, một chút đồng hành, cũng đủ để câu chuyện này được viết tiếp.
           </h1>
           <Button
-          variant="default"
-          className="bg-[#00724D] text-white rounded-full px-10 py-6 text-2xl font-bold gap-3 scale-110 hover:bg-[#00724D] hover:scale-115"
-          size="lg"
-          onClick={() => router.push("/support")}
+            variant="default"
+            className="bg-[#00724D] text-white rounded-full px-10 py-6 text-2xl font-bold gap-3 scale-110 hover:bg-[#00724D] hover:scale-115"
+            size="lg"
+            onClick={() => router.push("/support")}
           >
             <HandCoins size={36} strokeWidth={2} className="ml-2 flex-shrink-0 scale-140" />
             <span className="mr-2">ỦNG HỘ NGAY</span>
           </Button>
         </div>
       </section>
-      <div className="w-full relative">
+      <div className="w-full relative -mt-32">
         <Image
           src="/home_1.png"
           alt="Mở Hỏi Mở Illustration"
