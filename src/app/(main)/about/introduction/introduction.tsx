@@ -49,8 +49,8 @@ export default function Introduction() {
 
   return (
     <div className="flex flex-col items-center min-h-screen bg-white text-black dark:bg-zinc-900 dark:text-white">
-      <div className="w-full mx-auto mb-4">
-        <div className="relative overflow-hidden shadow-xl">
+      <div className="w-full mx-auto mb-4 p-8 lg:p-6 md:p-4">
+        <div className="relative overflow-hidden shadow-xl rounded-md">
           <video 
             ref={videoRef}
             src="/intro.mp4" 
@@ -69,12 +69,12 @@ export default function Introduction() {
             {isPlaying ? <Pause size={20} /> : <Play size={20} />}
           </button>
           
-          <div className="absolute bottom-0 left-[30%] right-[30%] flex flex-col items-center pb-36 animate-bounce">
+          <div className="absolute bottom-0 left-[30%] right-[30%] flex flex-col items-center pb-36 lg:pb-24 md:pb-16 animate-bounce">
             <p className="text-white text-sm bg-black/40 px-3 py-1 rounded-full font-medium">
               Cuộn xuống để xem thêm
             </p>
             <svg 
-              className="w-6 h-6 text-white mt-2"
+              className="w-6 h-6 text-white mt-2 animate-bounce"
               fill="none" 
               stroke="currentColor" 
               viewBox="0 0 24 24" 
@@ -91,172 +91,176 @@ export default function Introduction() {
         </div>
       </div>
       
-      <div className="container max-w-7xl mx-auto px-4 py-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+      <div className="container max-w-7xl mx-auto px-4 md:px-8 lg:px-16 py-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 lg:gap-6 items-center">
           <div className="prose prose-lg dark:prose-invert">
-            <p className="text-2xl leading-relaxed scale-110 text-justify">
+            <p className="xl:text-2xl lg:text-xl md:text-lg leading-relaxed text-justify">
               Dự án Hội sách Mơ Hỏi Mở là một dự án phi lợi nhuận được ươm mầm từ tình yêu sách và mong muốn lan toả niềm vui đọc. Tụi mình đã tạo ra một không gian ấm áp, nơi mọi người có thể gặp gỡ và sẻ chia qua những trang sách đầy yêu thương. Vì tụi mình tin rằng, việc đọc có thể bắt đầu thật tự nhiên, nhẹ nhàng và trở thành thói quen bền vững - nhất là với các bạn trẻ.
             </p>
           </div>
-          <div className="relative h-full w-full ml-[10%] items-center">
+          <div className="relative h-full w-full flex items-center mt-6 lg:mt-2 md:mt-0">
             <img 
               src="/about_introduction_1.png" 
-              alt="Hội sách Mở Hỏi Mở" 
+              alt="Hội sách Mở Hỏi Mở"
+              className="w-full md:max-w-[95%] lg:max-w-full"
             />
           </div>
         </div>
       </div>
 
-      <div className="w-full bg-[#FFFCE7] py-16">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16 text-[#5D4037]">
-            <div className="flex flex-col items-center">
-              <h3 className="text-7xl font-black">4+</h3>
-              <p className="text-2xl mt-2">mùa hội sách</p>
+      <div className="w-full py-16">
+        <div className="bg-gradient-to-b from-white to-[#FFFCE7] py-16"></div>
+        <div className="bg-[#FFFCE7]">
+          <div className="container mx-auto px-4 bg-[#FFFCE7]">
+            <div className="grid grid-cols-2 md:grid-cols-4 xl:gap-8 lg:gap-6 gap-4 mb-16 text-[#5D4037]">
+              <div className="flex flex-col items-center">
+                <h3 className="xl:text-7xl lg:text-6xl text-5xl font-black">4+</h3>
+                <p className="xl:text-2xl lg:text-xl text-sm mt-2">mùa hội sách</p>
+              </div>
+              <div className="flex flex-col items-center">
+                <h3 className="xl:text-7xl lg:text-6xl text-5xl font-black">3000+</h3>
+                <p className="xl:text-2xl lg:text-xl text-sm mt-2">người tham dự</p>
+              </div>
+              <div className="flex flex-col items-center">
+                <h3 className="xl:text-7xl lg:text-6xl text-5xl font-black">12500+</h3>
+                <p className="xl:text-2xl lg:text-xl text-sm mt-2">cuốn sách được bán ra</p>
+              </div>
+              <div className="flex flex-col items-center">
+                <h3 className="xl:text-7xl lg:text-6xl text-5xl font-black">6+</h3>
+                <p className="xl:text-2xl lg:text-xl text-sm mt-2">NXB tham gia</p>
+              </div>
             </div>
-            <div className="flex flex-col items-center">
-              <h3 className="text-7xl font-black">3000+</h3>
-              <p className="text-2xl mt-2">người tham dự</p>
-            </div>
-            <div className="flex flex-col items-center">
-              <h3 className="text-7xl font-black">12500+</h3>
-              <p className="text-2xl mt-2">cuốn sách được bán ra</p>
-            </div>
-            <div className="flex flex-col items-center">
-              <h3 className="text-7xl font-black">6+</h3>
-              <p className="text-2xl mt-2">NXB tham gia</p>
-            </div>
-          </div>
 
-          <div className="text-center">
-            <h2 className="text-7xl font-black text-[#F5AF28] mb-12">ĐỐI TÁC ĐỒNG HÀNH</h2>
-          </div>
+            <div className="text-center">
+              <h2 className="lg:text-7xl text-6xl font-black text-[#F5AF28] mb-12 mt-24">ĐỐI TÁC ĐỒNG HÀNH</h2>
+            </div>
 
-        </div>
-        <div className="relative overflow-hidden py-10">
-          <div className="flex items-center space-x-12 animate-marquee hover:pause-animation will-change-transform">
-            <div className="flex-shrink-0">
-              <img src="/logo1_1.png" alt="Alpha Books" className="h-24 object-contain" />
-            </div>
-            <div className="flex-shrink-0">
-              <img src="/logo1_2.png" alt="Ami" className="h-24 object-contain" />
-            </div>
-            <div className="flex-shrink-0">
-              <img src="/logo1_3.png" alt="AnBooks" className="scale-170 h-24 object-contain" />
-            </div>
-            <div className="flex-shrink-0">
-              <img src="/logo1_4.png" alt="BizEduco" className="scale-170 h-24 object-contain" />
-            </div>
-            <div className="flex-shrink-0">
-              <img src="/logo1_5.png" alt="Cham Cafe" className="scale-170 h-24 object-contain" />
-            </div>
-            <div className="flex-shrink-0">
-              <img src="/logo1_6.png" alt="VP Milk" className="h-24 object-contain" />
-            </div>
-            <div className="flex-shrink-0">
-              <img src="/logo1_7.png" alt="THBT" className="h-24 object-contain" />
-            </div>
-            <div className="flex-shrink-0">
-              <img src="/logo1_8.png" alt="Tergus" className="h-24 object-contain" />
-            </div>
-            <div className="flex-shrink-0">
-              <img src="/logo1_9.png" alt="Sense City" className="h-24 object-contain" />
-            </div>
-            <div className="flex-shrink-0">
-              <img src="/logo1_10.png" alt="Saigon Tam Duc" className="h-24 object-contain" />
-            </div>
-            <div className="flex-shrink-0">
-              <img src="/logo1_1.png" alt="Alpha Books" className="h-24 object-contain" />
-            </div>
-            <div className="flex-shrink-0">
-              <img src="/logo1_2.png" alt="Ami" className="h-24 object-contain" />
-            </div>
-            <div className="flex-shrink-0">
-              <img src="/logo1_3.png" alt="AnBooks" className="scale-170 h-24 object-contain" />
-            </div>
-            <div className="flex-shrink-0">
-              <img src="/logo1_4.png" alt="BizEduco" className="scale-170 h-24 object-contain" />
-            </div>
-            <div className="flex-shrink-0">
-              <img src="/logo1_5.png" alt="Cham Cafe" className="scale-170 h-24 object-contain" />
-            </div>
-            <div className="flex-shrink-0">
-              <img src="/logo1_6.png" alt="VP Milk" className="h-24 object-contain" />
-            </div>
-            <div className="flex-shrink-0">
-              <img src="/logo1_7.png" alt="THBT" className="h-24 object-contain" />
-            </div>
-            <div className="flex-shrink-0">
-              <img src="/logo1_8.png" alt="Tergus" className="h-24 object-contain" />
-            </div>
-            <div className="flex-shrink-0">
-              <img src="/logo1_9.png" alt="Sense City" className="h-24 object-contain" />
-            </div>
-            <div className="flex-shrink-0">
-              <img src="/logo1_10.png" alt="Saigon Tam Duc" className="h-24 object-contain" />
-            </div>
           </div>
+          <div className="relative overflow-hidden py-10">
+            <div className="flex items-center space-x-12 animate-marquee hover:pause-animation will-change-transform">
+              <div className="flex-shrink-0">
+                <img src="/logo1_1.png" alt="Alpha Books" className="h-24 object-contain" />
+              </div>
+              <div className="flex-shrink-0">
+                <img src="/logo1_2.png" alt="Ami" className="h-24 object-contain" />
+              </div>
+              <div className="flex-shrink-0">
+                <img src="/logo1_3.png" alt="AnBooks" className="scale-170 h-24 object-contain" />
+              </div>
+              <div className="flex-shrink-0">
+                <img src="/logo1_4.png" alt="BizEduco" className="scale-170 h-24 object-contain" />
+              </div>
+              <div className="flex-shrink-0">
+                <img src="/logo1_5.png" alt="Cham Cafe" className="scale-170 h-24 object-contain" />
+              </div>
+              <div className="flex-shrink-0">
+                <img src="/logo1_6.png" alt="VP Milk" className="h-24 object-contain" />
+              </div>
+              <div className="flex-shrink-0">
+                <img src="/logo1_7.png" alt="THBT" className="h-24 object-contain" />
+              </div>
+              <div className="flex-shrink-0">
+                <img src="/logo1_8.png" alt="Tergus" className="h-24 object-contain" />
+              </div>
+              <div className="flex-shrink-0">
+                <img src="/logo1_9.png" alt="Sense City" className="h-24 object-contain" />
+              </div>
+              <div className="flex-shrink-0">
+                <img src="/logo1_10.png" alt="Saigon Tam Duc" className="h-24 object-contain" />
+              </div>
+              <div className="flex-shrink-0">
+                <img src="/logo1_1.png" alt="Alpha Books" className="h-24 object-contain" />
+              </div>
+              <div className="flex-shrink-0">
+                <img src="/logo1_2.png" alt="Ami" className="h-24 object-contain" />
+              </div>
+              <div className="flex-shrink-0">
+                <img src="/logo1_3.png" alt="AnBooks" className="scale-170 h-24 object-contain" />
+              </div>
+              <div className="flex-shrink-0">
+                <img src="/logo1_4.png" alt="BizEduco" className="scale-170 h-24 object-contain" />
+              </div>
+              <div className="flex-shrink-0">
+                <img src="/logo1_5.png" alt="Cham Cafe" className="scale-170 h-24 object-contain" />
+              </div>
+              <div className="flex-shrink-0">
+                <img src="/logo1_6.png" alt="VP Milk" className="h-24 object-contain" />
+              </div>
+              <div className="flex-shrink-0">
+                <img src="/logo1_7.png" alt="THBT" className="h-24 object-contain" />
+              </div>
+              <div className="flex-shrink-0">
+                <img src="/logo1_8.png" alt="Tergus" className="h-24 object-contain" />
+              </div>
+              <div className="flex-shrink-0">
+                <img src="/logo1_9.png" alt="Sense City" className="h-24 object-contain" />
+              </div>
+              <div className="flex-shrink-0">
+                <img src="/logo1_10.png" alt="Saigon Tam Duc" className="h-24 object-contain" />
+              </div>
+            </div>
 
-          <div className="flex items-center space-x-12 animate-marquee-reverse hover:pause-animation will-change-transform mt-12">
-            <div className="flex-shrink-0">
-              <img src="/logo2_10.png" alt="Partner 10" className="h-24 object-contain" />
-            </div>
-            <div className="flex-shrink-0">
-              <img src="/logo2_8.png" alt="Partner 8" className="h-24 object-contain" />
-            </div>
-            <div className="flex-shrink-0">
-              <img src="/logo2_6.png" alt="Partner 6" className="scale-150 h-24 object-contain" />
-            </div>
-            <div className="flex-shrink-0">
-              <img src="/logo2_4.png" alt="Partner 4" className="scale-130 h-24 object-contain" />
-            </div>
-            <div className="flex-shrink-0">
-              <img src="/logo2_5.png" alt="Partner 5" className="scale-130 h-24 object-contain" />
-            </div>
-            <div className="flex-shrink-0">
-              <img src="/logo2_3.png" alt="Partner 3" className="scale-350 h-24 object-contain" />
-            </div>
-            <div className="flex-shrink-0">
-              <img src="/logo2_2.png" alt="Partner 2" className="h-24 object-contain" />
-            </div>
-            <div className="flex-shrink-0">
-              <img src="/logo2_1.png" alt="Partner 1" className="h-24 object-contain" />
-            </div>
-            <div className="flex-shrink-0">
-              <img src="/logo2_7.png" alt="Partner 7" className="h-24 object-contain" />
-            </div>
-            <div className="flex-shrink-0">
-              <img src="/logo2_9.png" alt="Partner 9" className="h-24 object-contain" />
-            </div>
-            <div className="flex-shrink-0">
-              <img src="/logo2_10.png" alt="Partner 10" className="h-24 object-contain" />
-            </div>
-            <div className="flex-shrink-0">
-              <img src="/logo2_8.png" alt="Partner 8" className="h-24 object-contain" />
-            </div>
-            <div className="flex-shrink-0">
-              <img src="/logo2_6.png" alt="Partner 6" className="scale-150 h-24 object-contain" />
-            </div>
-            <div className="flex-shrink-0">
-              <img src="/logo2_4.png" alt="Partner 4" className="scale-130 h-24 object-contain" />
-            </div>
-            <div className="flex-shrink-0">
-              <img src="/logo2_5.png" alt="Partner 5" className="scale-130 h-24 object-contain" />
-            </div>
-            <div className="flex-shrink-0">
-              <img src="/logo2_3.png" alt="Partner 3" className="scale-350 h-24 object-contain" />
-            </div>
-            <div className="flex-shrink-0">
-              <img src="/logo2_2.png" alt="Partner 2" className="h-24 object-contain" />
-            </div>
-            <div className="flex-shrink-0">
-              <img src="/logo2_1.png" alt="Partner 1" className="h-24 object-contain" />
-            </div>
-            <div className="flex-shrink-0">
-              <img src="/logo2_7.png" alt="Partner 7" className="h-24 object-contain" />
-            </div>
-            <div className="flex-shrink-0">
-              <img src="/logo2_9.png" alt="Partner 9" className="h-24 object-contain" />
+            <div className="flex items-center space-x-12 animate-marquee-reverse hover:pause-animation will-change-transform mt-12">
+              <div className="flex-shrink-0">
+                <img src="/logo2_10.png" alt="Partner 10" className="h-24 object-contain" />
+              </div>
+              <div className="flex-shrink-0">
+                <img src="/logo2_8.png" alt="Partner 8" className="h-24 object-contain" />
+              </div>
+              <div className="flex-shrink-0">
+                <img src="/logo2_6.png" alt="Partner 6" className="scale-150 h-24 object-contain" />
+              </div>
+              <div className="flex-shrink-0">
+                <img src="/logo2_4.png" alt="Partner 4" className="scale-130 h-24 object-contain" />
+              </div>
+              <div className="flex-shrink-0">
+                <img src="/logo2_5.png" alt="Partner 5" className="scale-130 h-24 object-contain" />
+              </div>
+              <div className="flex-shrink-0">
+                <img src="/logo2_3.png" alt="Partner 3" className="scale-350 h-24 object-contain" />
+              </div>
+              <div className="flex-shrink-0">
+                <img src="/logo2_2.png" alt="Partner 2" className="h-24 object-contain" />
+              </div>
+              <div className="flex-shrink-0">
+                <img src="/logo2_1.png" alt="Partner 1" className="h-24 object-contain" />
+              </div>
+              <div className="flex-shrink-0">
+                <img src="/logo2_7.png" alt="Partner 7" className="h-24 object-contain" />
+              </div>
+              <div className="flex-shrink-0">
+                <img src="/logo2_9.png" alt="Partner 9" className="h-24 object-contain" />
+              </div>
+              <div className="flex-shrink-0">
+                <img src="/logo2_10.png" alt="Partner 10" className="h-24 object-contain" />
+              </div>
+              <div className="flex-shrink-0">
+                <img src="/logo2_8.png" alt="Partner 8" className="h-24 object-contain" />
+              </div>
+              <div className="flex-shrink-0">
+                <img src="/logo2_6.png" alt="Partner 6" className="scale-150 h-24 object-contain" />
+              </div>
+              <div className="flex-shrink-0">
+                <img src="/logo2_4.png" alt="Partner 4" className="scale-130 h-24 object-contain" />
+              </div>
+              <div className="flex-shrink-0">
+                <img src="/logo2_5.png" alt="Partner 5" className="scale-130 h-24 object-contain" />
+              </div>
+              <div className="flex-shrink-0">
+                <img src="/logo2_3.png" alt="Partner 3" className="scale-350 h-24 object-contain" />
+              </div>
+              <div className="flex-shrink-0">
+                <img src="/logo2_2.png" alt="Partner 2" className="h-24 object-contain" />
+              </div>
+              <div className="flex-shrink-0">
+                <img src="/logo2_1.png" alt="Partner 1" className="h-24 object-contain" />
+              </div>
+              <div className="flex-shrink-0">
+                <img src="/logo2_7.png" alt="Partner 7" className="h-24 object-contain" />
+              </div>
+              <div className="flex-shrink-0">
+                <img src="/logo2_9.png" alt="Partner 9" className="h-24 object-contain" />
+              </div>
             </div>
           </div>
         </div>
