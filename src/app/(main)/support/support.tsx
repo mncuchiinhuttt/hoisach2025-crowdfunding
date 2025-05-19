@@ -36,50 +36,13 @@ export default function Support({
 
   return (
     <div className="w-full bg-white text-black dark:bg-zinc-900 dark:text-white">
-      <div className="w-full px-4 py-12">
-        <div className="w-full bg-white overflow-hidden">
-          <div className="p-8">
-            <h1 className="text-7xl font-black text-center text-[#F5AF28] mb-12">
-              DÀNH CHO NGƯỜI ỦNG HỘ
-            </h1>
-            <div className="w-full max-w-6xl mx-auto">
-              <div className="flex justify-between items-center mb-4">
-                <div>
-                  <span className="font-medium text-green-700 text-lg">Đã ủng hộ</span>
-                  <p className="text-3xl font-bold">
-                    {totalAmount.toLocaleString()} đ
-                  </p>
-                </div>
-                <div className="text-right">
-                  <span className="font-medium text-green-700 text-lg">Mục tiêu</span>
-                  <p className="text-3xl font-bold">
-                    {targetAmount.toLocaleString()} đ
-                  </p>
-                </div>
-              </div>
-                <div className="flex items-center w-full">
-                <div className="flex-grow relative">
-                  <Progress 
-                  value={progress} 
-                  className="h-4 bg-gray-200 [&>div]:bg-[#00724D] rounded-full" 
-                  />
-                </div>
-                  <span className="ml-3 text-lg font-semibold">
-                    {progress}%
-                  </span>
-                </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      
       <div className="w-full bg-gradient-to-b from-[#FFFCE7] to-white">
         <div className="w-full mx-auto p-18">
           <h1 className="text-4xl font-black text-left mb-8">
             📩  Thư ngỏ từ Nhóm Dự án Hội sách Mơ Hỏi Mở 2025
           </h1>
           
-          <div className="relative overflow-hidden transition-all duration-500 ease-in-out" 
+          <div className="relative overflow-hidden transition-all duration-500 ease-in-out text-justify" 
                style={{ maxHeight: isLetterExpanded ? '2000px' : '200px' }}>
             <div className="prose prose-lg max-w-none text-xl">
               <p>
@@ -124,6 +87,43 @@ export default function Support({
           </div>
         </div>
       </div>
+
+      <div className="w-full px-4 py-12">
+        <div className="w-full bg-white overflow-hidden">
+          <div className="p-8">
+            <h1 className="text-7xl font-black text-center text-[#F5AF28] mb-12">
+              DÀNH CHO NGƯỜI ỦNG HỘ
+            </h1>
+            <div className="w-full max-w-6xl mx-auto">
+              <div className="flex justify-between items-center mb-4">
+                <div>
+                  <span className="font-medium text-green-700 text-lg">Đã ủng hộ</span>
+                  <p className="text-3xl font-bold">
+                    {totalAmount.toLocaleString()} đ
+                  </p>
+                </div>
+                <div className="text-right">
+                  <span className="font-medium text-green-700 text-lg">Mục tiêu</span>
+                  <p className="text-3xl font-bold">
+                    {targetAmount.toLocaleString()} đ
+                  </p>
+                </div>
+              </div>
+                <div className="flex items-center w-full">
+                <div className="flex-grow relative">
+                  <Progress 
+                  value={progress} 
+                  className="h-4 bg-gray-200 [&>div]:bg-[#00724D] rounded-full" 
+                  />
+                </div>
+                  <span className="ml-3 text-lg font-semibold">
+                    {progress}%
+                  </span>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
       
       <div className="w-full py-16 bg-gradient-to-b from-white to-[#E4F7FF] via-[#f7fcff]">
         <div className="max-w-7xl mx-auto px-4">
@@ -139,7 +139,7 @@ export default function Support({
                   <li>Ngân hàng: <span className="font-semibold">...</span></li>
                   <li>Chủ tài khoản: <span className="font-semibold">...</span></li>
                   <li>Số tài khoản: <span className="font-semibold">...</span></li>
-                  <li>Nội dung chuyển khoản: <span className="font-semibold">...</span></li>
+                  <li>Nội dung chuyển khoản: <span className="font-semibold">Tên + SĐT + HS25</span></li>
                 </ul>
               </div>
 

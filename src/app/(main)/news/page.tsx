@@ -18,12 +18,12 @@ interface NewsItem {
 export default function NewsPage() {
   const newsItems: NewsItem[] = [
 	{
-	  title: "Hội sách 'Mở Hỏi Mở' dự kiến hút hàng nghìn bạn trẻ",
+	  title: "Hội sách 'Mơ Hỏi Mở' dự kiến hút hàng nghìn bạn trẻ",
 	  source: "Báo VNExpress",
 	  link: "https://vnexpress.net/hoi-sach-mo-hoi-mo-du-kien-hut-hang-nghin-ban-tre-4629314.html",
 	},
 	{
-	  title: "4.000 đầu sách phục vụ bạn trẻ trong hội sách 'Mở Hỏi Mở'",
+	  title: "4.000 đầu sách phục vụ bạn trẻ trong hội sách 'Mơ Hỏi Mở'",
 	  source: "Báo Phụ Nữ",
 	  link: "https://www.phunuonline.com.vn/4-000-dau-sach-phuc-vu-ban-tre-trong-hoi-sach-mo-hoi-mo-a1496406.html",
 	},
@@ -38,7 +38,7 @@ export default function NewsPage() {
 		link: "https://znews.vn/hoi-sach-cho-ban-tre-ben-tre-post1446305.html",
 	},
 	{
-	  title: "Ngày hội sách Mở Hỏi Mở và cuộc thi 'Tôm sách' dành cho học sinh Bến Tre",
+	  title: "Ngày hội sách Mơ Hỏi Mở và cuộc thi 'Tôm sách' dành cho học sinh Bến Tre",
 	  source: "Báo Thanh Niên",
 	  link: "https://thanhnien.vn/ngay-hoi-sach-mo-hoi-mo-va-cuoc-thi-tom-sach-danh-cho-hoc-sinh-ben-tre-185230718154252475.htm",
 	},
@@ -48,12 +48,12 @@ export default function NewsPage() {
 	  link: "https://svvn.tienphong.vn/phat-dong-cuoc-thi-tom-sach-cho-thi-sinh-ben-tre-post1552408.tpo",
 	},
 	{
-	  title: "Nhiều hoạt động thiết thực tại Hội sách Mở hỏi mở",
+	  title: "Nhiều hoạt động thiết thực tại Hội sách Mơ hỏi mở",
 	  source: "Báo Đồng Khởi",
 	  link: "https://baodongkhoi.vn/nhieu-hoat-dong-thiet-thuc-tai-hoi-sach-mo-hoi-mo-16072023-a117157.html",
 	},
 	{
-	  title: "TỔ CHỨC HỘI SÁCH MỞ HỎI MỞ - SỰ KIỆN KHUYẾN ĐỌC CHO BẠN ĐỌC TRẺ",
+	  title: "TỔ CHỨC HỘI SÁCH MƠ HỎI MỞ - SỰ KIỆN KHUYẾN ĐỌC CHO BẠN ĐỌC TRẺ",
 	  source: "Truyền hình Bến Tre",
 	  link: "https://www.youtube.com/watch?v=4m8k3gFNAMw",
 	},

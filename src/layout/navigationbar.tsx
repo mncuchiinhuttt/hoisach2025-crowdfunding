@@ -64,6 +64,14 @@ export function NavigationBar() {
         <NavigationMenu>
           <NavigationMenuList className="gap-2 lg:gap-2">
             <NavigationMenuItem>
+              <Link href="/support" passHref>
+                <NavigationMenuLink className="text-white text-base lg:text-lg font-bold py-2 px-3 block hover:bg-white rounded-md">
+                  Ủng hộ
+                </NavigationMenuLink>
+              </Link>
+            </NavigationMenuItem>
+
+            <NavigationMenuItem>
               <NavigationMenuTrigger className="text-white text-base lg:text-lg font-bold bg-transparent hover:bg-white focus:bg-white">
                 Về chúng tôi
               </NavigationMenuTrigger>
@@ -105,14 +113,6 @@ export function NavigationBar() {
               <Link href="/news" passHref>
                 <NavigationMenuLink className="text-white text-base lg:text-lg font-bold py-2 px-3 block hover:bg-white rounded-md">
                   Tin tức
-                </NavigationMenuLink>
-              </Link>
-            </NavigationMenuItem>
-
-            <NavigationMenuItem>
-              <Link href="/support" passHref>
-                <NavigationMenuLink className="text-white text-base lg:text-lg font-bold py-2 px-3 block hover:bg-white rounded-md">
-                  Ủng hộ
                 </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>

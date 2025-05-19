@@ -33,7 +33,10 @@ export default function HomeContent() {
           </Button>
         </div>
       </section>
-      <div className="w-full relative -mt-32">
+      <div className="w-full">
+
+      </div>
+      <div className="w-full relative -mt-64 2xl:-mt-32 lg:-mt-24 md:-mt-12 sm:-mt-8">
         <Image
           src="/home_1.png"
           alt="Mở Hỏi Mở Illustration"
