@@ -6,17 +6,55 @@ import { useRouter } from "next/navigation";
 import { 
   HandCoins, Heart, Book, Newspaper, ChevronRight
 } from "lucide-react";
+import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 
 export default function HomeContent() {
   const router = useRouter();
+  const [isVisible, setIsVisible] = useState(false);
+  
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsVisible(true);
+    }, 300);
+    
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <div className="flex flex-col items-center">
-      <section className="w-full max-w-7xl px-4 pt-16 text-center">
-        <div className="border-2 border-dashed border-gray-400 rounded-lg p-8 mx-auto max-w-3xl flex flex-col items-center justify-center min-h-[300px]">
-          <h2 className="text-2xl font-medium text-gray-500 mb-4">Poster Here</h2>
-          <p className="text-gray-400">Từ từ đợi có cái poster ròi thêm dô!!!</p>
-        </div>
+      <section className="w-full overflow-hidden">
+        <motion.div
+          initial={{ y: -300, opacity: 0 }}
+          animate={isVisible ? { y: 0, opacity: 1 } : { y: -300, opacity: 0 }}
+          transition={{ 
+            type: "spring", 
+            stiffness: 25,  
+            damping: 25,    
+            mass: 1.8,      
+            duration: 3,    
+            restDelta: 0.01 
+          }}
+          className="relative"
+        >
+          <motion.div 
+            className="w-full relative"
+            initial={{ boxShadow: "0 0 0 rgba(0,0,0,0)" }}
+            animate={{ boxShadow: "0 20px 50px rgba(0,0,0,0.15)" }}
+            transition={{ duration: 2.5, ease: "easeOut", delay: 0.5 }}
+          >
+            <motion.img 
+              src="/home_page_poster.png"
+              alt="Mơ Hỏi Mở Poster"
+              className="w-full h-auto"
+              initial={{ filter: "blur(8px)", opacity: 0.7 }}
+              animate={{ filter: "blur(0px)", opacity: 1 }}
+              transition={{ duration: 2, ease: "easeOut", delay: 0.3 }}
+            />
+          </motion.div>
+        </motion.div>
       </section>
+      
       <section className="w-full max-w-7xl px-4 pt-16 text-center relative z-10">
         <div className="p-12">
           <h1 className="text-4xl/snug mb-12 font-semibold">
@@ -33,9 +71,11 @@ export default function HomeContent() {
           </Button>
         </div>
       </section>
+      
       <div className="w-full">
 
       </div>
+      
       <div className="w-full relative -mt-64 2xl:-mt-32 lg:-mt-24 md:-mt-12 sm:-mt-8">
         <Image
           src="/home_1.png"
@@ -47,6 +87,7 @@ export default function HomeContent() {
           quality={100}
         />
       </div>
+      
       <section className="w-full bg-[#FEF9DB]">
         <div className="max-w-7xl mx-auto px-4 py-16">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
