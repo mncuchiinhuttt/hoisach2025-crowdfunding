@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import { Toaster } from "sonner";
 import Head from "next/head";
+import { Analytics } from "@vercel/analytics/next"
 import "./globals.css";
 
 const montserrat = Montserrat({
@@ -43,6 +44,8 @@ export default function RootLayout({
         <Toaster richColors position="top-center" />
       </body>
     </html>
+
+    <Analytics />
     </>
   );
 }

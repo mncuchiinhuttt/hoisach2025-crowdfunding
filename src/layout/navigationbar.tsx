@@ -116,14 +116,6 @@ export function NavigationBar() {
                 </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
-
-            <NavigationMenuItem>
-              <Link href="/contact" passHref>
-                <NavigationMenuLink className="text-white text-base lg:text-lg font-bold py-2 px-3 block hover:bg-white rounded-md">
-                  Liên hệ
-                </NavigationMenuLink>
-              </Link>
-            </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>
       </div>
