@@ -11,48 +11,68 @@ import { useEffect, useState } from "react";
 
 export default function HomeContent() {
   const router = useRouter();
-  const [isVisible, setIsVisible] = useState(false);
-  
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsVisible(true);
-    }, 300);
-    
-    return () => clearTimeout(timer);
-  }, []);
 
   return (
     <div className="flex flex-col items-center">
       <section className="w-full overflow-hidden">
-        <motion.div
-          initial={{ y: -300, opacity: 0 }}
-          animate={isVisible ? { y: 0, opacity: 1 } : { y: -300, opacity: 0 }}
-          transition={{ 
-            type: "spring", 
-            stiffness: 25,  
-            damping: 25,    
-            mass: 1.8,      
-            duration: 3,    
-            restDelta: 0.01 
-          }}
-          className="relative"
-        >
+        <div className="relative w-full">
           <motion.div 
             className="w-full relative"
             initial={{ boxShadow: "0 0 0 rgba(0,0,0,0)" }}
             animate={{ boxShadow: "0 20px 50px rgba(0,0,0,0.15)" }}
-            transition={{ duration: 2.5, ease: "easeOut", delay: 0.5 }}
+            transition={{ duration: 2.5, ease: "easeOut", delay: 3 }}
           >
+            {/* Base layer */}
             <motion.img 
-              src="/home_page_poster.png"
-              alt="Mơ Hỏi Mở Poster"
+              src="/poster/1.png"
+              alt="Mơ Hỏi Mở Poster - Layer 1"
               className="w-full h-auto"
-              initial={{ filter: "blur(8px)", opacity: 0.7 }}
-              animate={{ filter: "blur(0px)", opacity: 1 }}
-              transition={{ duration: 2, ease: "easeOut", delay: 0.3 }}
+              initial={{ opacity: 0, y: -30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1.2, ease: "easeOut" }}
+            />
+
+            {/* Layer 2 */}
+            <motion.img 
+              src="/poster/2.png"
+              alt="Mơ Hỏi Mở Poster - Layer 2"
+              className="w-full h-auto absolute top-0 left-0"
+              initial={{ opacity: 0, y: -50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1.4, ease: "easeOut", delay: 0.6 }}
+            />
+
+            {/* Layer 3 */}
+            <motion.img 
+              src="/poster/3.png"
+              alt="Mơ Hỏi Mở Poster - Layer 3"
+              className="w-full h-auto absolute top-0 left-0"
+              initial={{ opacity: 0, y: -70 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1.6, ease: "easeOut", delay: 1.2 }}
+            />
+
+            {/* Layer 4 */}
+            <motion.img 
+              src="/poster/4.png"
+              alt="Mơ Hỏi Mở Poster - Layer 4"
+              className="w-full h-auto absolute top-0 left-0"
+              initial={{ opacity: 0, y: -90 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1.8, ease: "easeOut", delay: 1.8 }}
+            />
+
+            {/* Layer 5 */}
+            <motion.img 
+              src="/poster/5.png"
+              alt="Mơ Hỏi Mở Poster - Layer 5"
+              className="w-full h-auto absolute top-0 left-0"
+              initial={{ opacity: 0, y: -110 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 2.0, ease: "easeOut", delay: 2.4 }}
             />
           </motion.div>
-        </motion.div>
+        </div>
       </section>
       
       <section className="w-full max-w-7xl px-4 pt-16 text-center relative z-10">
