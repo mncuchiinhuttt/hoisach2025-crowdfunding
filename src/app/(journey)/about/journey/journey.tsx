@@ -16,6 +16,10 @@ export default function Journey() {
   const season2GalleryRef = useRef<HTMLDivElement>(null);
   const season3GalleryRef = useRef<HTMLDivElement>(null);
   const season4GalleryRef = useRef<HTMLDivElement>(null);
+  const season5TitleRef = useRef<HTMLHeadingElement>(null);
+  const season5DividerRef = useRef<HTMLDivElement>(null);
+  const season5ImageRef = useRef<HTMLDivElement>(null);
+  const season5ContentRef = useRef<HTMLDivElement>(null);
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [isPageChanging, setIsPageChanging] = useState<boolean>(false);
@@ -344,52 +348,6 @@ export default function Journey() {
                 duration: 0.5,
                 ease: 'power1.in'
               });
-            }
-          });
-        }
-        
-        // Create a separate progress indicator for the gallery
-        const galleryProgress = document.createElement('div');
-        galleryProgress.className = 'gallery-progress';
-        galleryProgress.innerHTML = `
-          <div class="fixed right-6 top-1/2 transform -translate-y-1/2 flex flex-col items-center z-40 pointer-events-none">
-            <div class="h-40 w-1 bg-gray-200 rounded-full relative overflow-hidden">
-              <div class="gallery-progress-bar absolute top-0 left-0 w-full bg-[#00724D] rounded-full" style="height: 0%;"></div>
-            </div>
-          </div>
-        `;
-        document.body.appendChild(galleryProgress);
-        
-        // Create a timeline for the progress bar
-        const progressBar = galleryProgress.querySelector('.gallery-progress-bar');
-        
-        if (progressBar) {
-          ScrollTrigger.create({
-            trigger: season1Gallery,
-            start: 'top 80%',
-            end: 'bottom 20%',
-            id: 'gallery-progress',
-            onUpdate: (self) => {
-              gsap.to(progressBar, {
-                height: `${self.progress * 100}%`,
-                duration: 0.1,
-                ease: 'none'
-              });
-              
-              // Show/hide progress indicator based on progress
-              if (self.progress > 0 && self.progress < 1) {
-                gsap.to(galleryProgress, {
-                  opacity: 1,
-                  duration: 0.3,
-                  ease: 'power1.out'
-                });
-              } else {
-                gsap.to(galleryProgress, {
-                  opacity: 0,
-                  duration: 0.3,
-                  ease: 'power1.in'
-                });
-              }
             }
           });
         }
@@ -1016,52 +974,6 @@ export default function Journey() {
               ease: 'sine.inOut'
             });
           }
-          
-          // Create a Season 2 scroll progress indicator
-          const season2Progress = document.createElement('div');
-          season2Progress.className = 'season2-progress';
-          season2Progress.innerHTML = `
-            <div class="fixed right-6 top-1/2 transform -translate-y-1/2 flex flex-col items-center z-40 pointer-events-none">
-              <div class="h-40 w-1 bg-[#FEF9DB] rounded-full relative overflow-hidden">
-                <div class="season2-progress-bar absolute top-0 left-0 w-full bg-[#00724D] rounded-full" style="height: 0%;"></div>
-              </div>
-            </div>
-          `;
-          document.body.appendChild(season2Progress);
-          
-          // Create a timeline for the progress bar
-          const season2ProgressBar = season2Progress.querySelector('.season2-progress-bar');
-          
-          if (season2ProgressBar) {
-            ScrollTrigger.create({
-              trigger: season2Gallery,
-              start: 'top 80%',
-              end: 'bottom 20%',
-              id: 'season2-gallery-progress',
-              onUpdate: (self) => {
-                gsap.to(season2ProgressBar, {
-                  height: `${self.progress * 100}%`,
-                  duration: 0.1,
-                  ease: 'none'
-                });
-                
-                // Show/hide progress indicator based on progress
-                if (self.progress > 0 && self.progress < 1) {
-                  gsap.to(season2Progress, {
-                    opacity: 1,
-                    duration: 0.3,
-                    ease: 'power1.out'
-                  });
-                } else {
-                  gsap.to(season2Progress, {
-                    opacity: 0,
-                    duration: 0.3,
-                    ease: 'power1.in'
-                  });
-                }
-              }
-            });
-          }
         }
       }
       
@@ -1640,6 +1552,104 @@ export default function Journey() {
       }
     }
     
+    // Season 5 animations with ScrollTrigger
+    if (season5TitleRef.current && season5DividerRef.current && season5ImageRef.current && season5ContentRef.current) {
+      // Animation for title
+      ScrollTrigger.create({
+        trigger: season5TitleRef.current,
+        start: 'top 80%',
+        toggleActions: 'play none none reverse',
+        onEnter: () => {
+          gsap.to(season5TitleRef.current, {
+            opacity: 1,
+            y: 0,
+            duration: 0.8,
+            ease: "power2.out"
+          });
+        },
+        onLeaveBack: () => {
+          gsap.to(season5TitleRef.current, {
+            opacity: 0,
+            y: 10,
+            duration: 0.5,
+            ease: "power2.in"
+          });
+        }
+      });
+      
+      // Animation for divider
+      ScrollTrigger.create({
+        trigger: season5DividerRef.current,
+        start: 'top 80%',
+        toggleActions: 'play none none reverse',
+        onEnter: () => {
+          gsap.to(season5DividerRef.current, {
+            opacity: 1,
+            scaleX: 1,
+            duration: 0.8,
+            delay: 0.2,
+            ease: "power2.out"
+          });
+        },
+        onLeaveBack: () => {
+          gsap.to(season5DividerRef.current, {
+            opacity: 0,
+            scaleX: 0,
+            duration: 0.5,
+            ease: "power2.in"
+          });
+        }
+      });
+      
+      // Animation for image
+      ScrollTrigger.create({
+        trigger: season5ImageRef.current,
+        start: 'top 75%',
+        toggleActions: 'play none none reverse',
+        onEnter: () => {
+          gsap.to(season5ImageRef.current, {
+            opacity: 1,
+            x: 0,
+            duration: 0.8,
+            delay: 0.4,
+            ease: "power2.out"
+          });
+        },
+        onLeaveBack: () => {
+          gsap.to(season5ImageRef.current, {
+            opacity: 0,
+            x: -50,
+            duration: 0.5,
+            ease: "power2.in"
+          });
+        }
+      });
+      
+      // Animation for content
+      ScrollTrigger.create({
+        trigger: season5ContentRef.current,
+        start: 'top 75%',
+        toggleActions: 'play none none reverse',
+        onEnter: () => {
+          gsap.to(season5ContentRef.current, {
+            opacity: 1,
+            x: 0,
+            duration: 0.8,
+            delay: 0.6,
+            ease: "power2.out"
+          });
+        },
+        onLeaveBack: () => {
+          gsap.to(season5ContentRef.current, {
+            opacity: 0,
+            x: 50,
+            duration: 0.5,
+            ease: "power2.in"
+          });
+        }
+      });
+    }
+    
     return () => {
       // Clean up on component unmount
       window.removeEventListener('resize', debouncedResize);
@@ -1826,8 +1836,7 @@ export default function Journey() {
         </section>
         
         <section id="season2" className="season-section min-h-screen py-24 relative" data-speed="1.1">
-          <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-white to-[#FEF9DB]/10 w-full">
-          </div>
+          <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-white to-[#FEF9DB]/10 w-full"></div>
           <div className="max-w-6xl mx-auto px-6 relative z-10">
             <h2 className="text-5xl font-black text-center mb-4 text-[#00724D]">Mùa 2: Hội sách Chín Ba-phần-tư 2017</h2>
             <div className="w-24 h-1 bg-[#00724D] mx-auto mb-12 rounded-full"></div>
@@ -2157,9 +2166,10 @@ export default function Journey() {
           </div>
         </section>
 
-        <section id="season4" className="season-section min-h-screen py-8 relative bg-white" data-speed="1.1">
+        <section id="season4" className="season-section min-h-screen py-8 relative" data-speed="1.1">
           <div className="max-w-6xl mx-auto px-6 relative z-10">
-            <h2 className="text-5xl font-black text-center mb-4 text-[#00724D]">Mùa 4: Hội sách Mơ Hỏi Mở 2023</h2>
+            <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-white to-[#FEF9DB]/10 w-full"></div>
+            <h2 className="relative text-5xl font-black text-center mb-4 text-[#00724D]">Mùa 4: Hội sách Mơ Hỏi Mở 2023</h2>
             <div className="w-24 h-1 bg-[#00724D] mx-auto mb-12 rounded-full"></div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
@@ -2352,22 +2362,58 @@ export default function Journey() {
           </div>
           <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-transparent to-white w-full"></div>
         </section>
-        
-        {/* <section className="journey-future py-24 bg-gradient-to-b from-white to-[#FEF9DB]/30" data-speed="0.9">
-          <div className="max-w-4xl mx-auto text-center px-4">
-            <h2 className="text-4xl font-bold mb-4 text-[#00724D]">Cuộc hành trình tiếp tục!</h2>
-            <div className="w-20 h-1 bg-[#00724D] mx-auto mb-8 rounded-full opacity-70"></div>
-            <p className="text-xl text-gray-700 mb-12">
-              Qua hơn một năm hoạt động, "Mơ Hỏi Mở" đã chạm đến hơn 500 em nhỏ tại 12 tỉnh thành. 
-              Nhưng hành trình của chúng tôi vẫn chưa kết thúc - với sự hỗ trợ của bạn, 
-              chúng tôi có thể mang ánh sáng tri thức đến với nhiều em hơn nữa.
-            </p>
+
+        <section id="season5" className="season-section min-h-screen py-8 relative bg-white" data-speed="1.1">
+          <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-white w-full"></div>
+          <div className="max-w-6xl mx-auto px-6 relative z-10">
+            <h2 className="text-5xl font-black text-center mb-4 text-[#00724D] opacity-0 transform translate-y-10 transition-all duration-700" ref={season5TitleRef}>Mùa 5: Hội sách Mơ Hỏi Mở 2025</h2>
+            <div className="w-24 h-1 bg-[#00724D] mx-auto mb-12 rounded-full opacity-0 transform scale-x-0 transition-all duration-700 delay-100" ref={season5DividerRef}></div>
             
-            <a href="#" className="inline-block bg-[#00724D] text-white py-3 px-8 rounded-full font-bold text-lg shadow-lg hover:shadow-xl transform transition-all duration-300 hover:-translate-y-1">
-              Tham gia cùng chúng tôi
-            </a>
+            <div className="grid grid-cols-1 md:grid-cols-2 items-center">
+              <div className="aspect-square bg-gray-200 rounded-lg shadow-md overflow-hidden transform transition-all duration-700 hover:shadow-xl opacity-0 translate-x-[-50px]" ref={season5ImageRef}>
+                <img 
+                  src="/journey-materials/logo5.jpg"  
+                  alt="Mùa Hội sách thứ 5" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="opacity-0 translate-x-[50px] transition-all duration-700" ref={season5ContentRef}>
+                <div className="relative">
+                  <p className="text-4xl font-black text-gray-700 mb-8 text-center bg-gradient-to-r from-[#00724D] via-[#4ade80] to-[#00724D] bg-clip-text animate-pulse">
+                    Đang làm nè!!!
+                  </p>
+                  <div className="flex justify-center gap-4 mb-6">
+                    <span className="inline-block w-3 h-3 bg-[#00724D] rounded-full animate-bounce" style={{animationDelay: '0ms'}}></span>
+                    <span className="inline-block w-3 h-3 bg-[#00724D] rounded-full animate-bounce" style={{animationDelay: '150ms'}}></span>
+                    <span className="inline-block w-3 h-3 bg-[#00724D] rounded-full animate-bounce" style={{animationDelay: '300ms'}}></span>
+                  </div>
+                  <p className="text-lg text-gray-600 text-center">
+                    Hội sách sẽ diễn ra vào tháng 7/2025
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
-        </section> */}
+          {/* <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[#FEF9DB]/30 to-transparent w-full"></div> */}
+        </section>
+        
+        <section id="final" className="journey-future py-4 bg-gradient-to-b from-white to-[#FEF9DB]/30" data-speed="1.1">
+          <div className="max-w-6xl mx-auto text-center px-4">
+            <h2 className="text-6xl font-bold text-[#00724D]">10 năm - 5 mùa</h2>
+            <h2 className="text-4xl font-bold text-[#00724D] mb-4">không chỉ là một cột mốc - mà là cả một câu chuyện dài đầy cảm hứng</h2>
+            <div className="w-20 h-1 bg-[#00724D] mx-auto mb-8 rounded-full opacity-70"></div>
+            <p className="text-xl text-gray-700">Là tình yêu dành cho sách được nuôi dưỡng qua từng mùa hội.</p>
+            <p className="text-xl text-gray-700">Là những thế hệ gặp nhau, gắn kết với bằng tri thức và niềm hăng say</p>
+            <p className="text-xl text-gray-700">Là biết bao giấc mơ âm thầm được ươm mầm để rồi bừng nở đầy rực rỡ</p>
+            <p className="text-xl text-gray-700">Và tụi mình tin rằng...</p>
+            <p className="text-xl text-gray-700">Hành trình này vẫn sẽ tiếp tục - với nhiều điều bí ẩn đang chờ phía trước.</p>
+            <p className="text-xl text-gray-700 mb-12">Tụi mình sẽ đi - bằng tất cả đam mê và cả niềm tin vào những điều tốt đẹp. với tụi mình, mỗi mùa hội sách không chỉ là sự kiện – mà là một lời hẹn. Với tri thức. Với cộng đồng. Và với chính những giấc mơ thuở đầu.</p>
+            
+            {/* <a href="#" className="inline-block bg-[#00724D] text-white py-3 px-8 rounded-full font-bold text-lg shadow-lg hover:shadow-xl transform transition-all duration-300 hover:-translate-y-1">
+              Tham gia cùng chúng tôi
+            </a> */}
+          </div>
+        </section>
       </div>
     </div>
   )
