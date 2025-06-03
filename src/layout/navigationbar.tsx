@@ -42,7 +42,7 @@ export function NavigationBar() {
     {
       title: "Đêm nhạc",
       href: "/activities/music-night",
-      description: "Chưa thấy full kịch bản chưa biét ghi gì",
+      description: "Khi ngày tắt nắng, hãy ghé lại sân khấu đặc biệt của \"Mơ Hỏi Mở\" - nơi âm nhạc lên tiếng và trái tim cùng nhau hát vang.",
     }
   ];
 

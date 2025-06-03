@@ -136,9 +136,9 @@ export default function Support({
               <div>
                 <h3 className="text-3xl font-bold text-[#00724D] mb-4">1. Chuyển khoản đến</h3>
                 <ul className="list-disc pl-6 space-y-3 text-2xl">
-                  <li>Ngân hàng: <span className="font-semibold">...</span></li>
-                  <li>Chủ tài khoản: <span className="font-semibold">...</span></li>
-                  <li>Số tài khoản: <span className="font-semibold">...</span></li>
+                  <li>Ngân hàng: <span className="font-semibold">BIDV</span></li>
+                  <li>Chủ tài khoản: <span className="font-semibold">CAU LAC BO SACH BEN TRE</span></li>
+                  <li>Số tài khoản: <span className="font-semibold">8680059374</span></li>
                   <li>Nội dung chuyển khoản: <span className="font-semibold">Tên + SĐT + HS25</span></li>
                 </ul>
               </div>
@@ -201,8 +201,8 @@ export default function Support({
               <div>
                 <p className="font-bold text-[#00724D] text-3xl">Nếu có bất kỳ trục trặc nào, hãy liên hệ qua</p>
                 <ul className="list-disc pl-6 mt-3 text-2xl">
-                  <li>Email: <span className="font-semibold">doingoai.hoisach@gmail.com</span></li>
-                  <li>SĐT (Zalo/Tin nhắn): <span className="font-semibold">0902 759 828 - Bảo Ngọc</span></li>
+                  <li>Email: <span className="font-semibold">mohoimo.hoisach@gmail.com</span></li>
+                  <li>Facebook: <span className="font-semibold"><a href="https://www.facebook.com/hoisachmohoimo">Hoi Sach Mo Hoi Mo</a></span></li>
                 </ul>
               </div>
             </div>
