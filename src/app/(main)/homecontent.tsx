@@ -75,9 +75,9 @@ export default function HomeContent() {
         </div>
       </section>
       
-      <section className="w-full max-w-7xl px-4 pt-16 text-center relative z-10">
+      <section className="w-full max-w-7xl px-4 pt-8 lg:pt-16 text-center relative z-10">
         <div className="p-12">
-          <h1 className="text-4xl/snug mb-12 font-semibold">
+          <h1 className="text-xl lg:text-3xl xl:text-4xl/snug mb-12 font-semibold">
             Để hành trình "Mơ Hỏi Mở" tiếp tục lan tỏa, tụi mình rất cần sự góp tay của bạn. Một chút yêu thương, một chút đồng hành, cũng đủ để câu chuyện này được viết tiếp.
           </h1>
           <Button
@@ -92,11 +92,7 @@ export default function HomeContent() {
         </div>
       </section>
       
-      <div className="w-full">
-
-      </div>
-      
-      <div className="w-full relative -mt-64 2xl:-mt-32 lg:-mt-24 md:-mt-12 sm:-mt-8">
+      <div className="w-full relative 2xl:-mt-32 lg:-mt-24 md:-mt-12 -mt-6">
         <Image
           src="/home_1.png"
           alt="Mở Hỏi Mở Illustration"
