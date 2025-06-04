@@ -1750,7 +1750,7 @@ export default function Journey() {
           
           <div id="season1-gallery" className="season1-gallery w-full py-12 min-h-[80vh] overflow-hidden">
             <div className="sticky top-[120px] max-w-6xl mx-auto px-6">
-              <h3 className="text-3xl font-bold mb-12 text-[#00724D]">Hoạt động nổi bật</h3>
+              <h3 className="text-3xl font-bold mb-10 text-[#00724D] relative after:content-[''] after:absolute after:bottom-[-8px] after:left-0 after:h-[3px] after:bg-[#00724D] after:w-[80px] after:rounded-full">Hoạt động nổi bật</h3>
               
               <div className="season1-images-container w-full pb-8 pt-4" ref={season1GalleryRef}>
                 <div className="season1-images-grid grid grid-cols-1 md:grid-cols-2 gap-8">
