@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -15,6 +15,8 @@ import {
 import { ListItem } from "@/components/ui/list-item";
 
 export function NavigationBar() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   const aboutItems = [
     {
       title: "Giới thiệu",
@@ -121,12 +123,116 @@ export function NavigationBar() {
       </div>
 
       <div className="md:hidden">
-        <button className="text-white">
-          <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
+        <button 
+          className="text-white" 
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          aria-label="Toggle mobile menu"
+        >
+          {mobileMenuOpen ? (
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          ) : (
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          )}
         </button>
       </div>
+
+      {/* Mobile Menu */}
+      {mobileMenuOpen && (
+        <div className="fixed inset-0 z-50 md:hidden">
+          {/* Backdrop */}
+          <div 
+            className="fixed inset-0 bg-black/50" 
+            onClick={() => setMobileMenuOpen(false)}
+          ></div>
+          
+          {/* Side menu */}
+          <div className="fixed right-0 top-0 h-full w-3/4 max-w-sm bg-emerald-700 p-6 shadow-xl">
+            <div className="flex items-center justify-between mb-8">
+              <Link href="/" onClick={() => setMobileMenuOpen(false)}>
+                <Image
+                  src="/navbarlogo.png"
+                  alt="Logo"
+                  width={50}
+                  height={50}
+                  className="w-12 h-12"
+                />
+              </Link>
+              
+              <button
+                className="text-white"
+                onClick={() => setMobileMenuOpen(false)}
+                aria-label="Close menu"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+            
+            <div className="space-y-6">
+              {/* Direct links */}
+              <Link
+                href="/support"
+                className="block text-white font-bold text-lg py-2 border-b border-emerald-600"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Ủng hộ
+              </Link>
+              
+              {/* About dropdown */}
+              <div className="py-2 border-b border-emerald-600">
+                <div className="flex items-center justify-between text-white font-bold text-lg mb-2">
+                  <span>Về chúng tôi</span>
+                </div>
+                <div className="pl-4 space-y-3 mt-2">
+                  {aboutItems.map((item) => (
+                    <Link
+                      key={item.title}
+                      href={item.href}
+                      className="block text-white py-1"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      {item.title}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+              
+              {/* Activities dropdown */}
+              <div className="py-2 border-b border-emerald-600">
+                <div className="flex items-center justify-between text-white font-bold text-lg mb-2">
+                  <span>Hoạt động</span>
+                </div>
+                <div className="pl-4 space-y-3 mt-2">
+                  {activityItems.map((item) => (
+                    <Link
+                      key={item.title}
+                      href={item.href}
+                      className="block text-white py-1"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      {item.title}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+              
+              {/* News link */}
+              <Link
+                href="/news"
+                className="block text-white font-bold text-lg py-2 border-b border-emerald-600"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Tin tức
+              </Link>
+            </div>
+          </div>
+        </div>
+      )}
     </nav>
   );
 }
