@@ -38,6 +38,9 @@ export default function Support({
     <div className="w-full bg-white text-black dark:bg-zinc-900 dark:text-white">
       <div className="w-full bg-gradient-to-b from-[#FFFCE7] to-white">
         <div className="w-full mx-auto p-18">
+          <h1 className="text-7xl font-black text-center text-[#F5AF28] mb-12">
+              DÀNH CHO NGƯỜI ỦNG HỘ
+          </h1>
           <h1 className="text-4xl font-black text-left mb-8">
             📩  Thư ngỏ từ Nhóm Dự án Hội sách Mơ Hỏi Mở 2025
           </h1>
@@ -58,7 +61,7 @@ export default function Support({
                 Để có thể tổ chức thành công một sự kiện ý nghĩa như vậy, đồng thời duy trì các hoạt động khuyến đọc và phát triển dự án bền vững trong tương lai, nhóm dự án trân trọng kêu gọi sự chung tay hỗ trợ từ quý cô chú, anh chị thông qua chiến dịch <a className="font-semibold">Gây quỹ cộng đồng</a>. Mọi đóng góp, dù lớn hay nhỏ, đều vô cùng quý giá và sẽ góp phần quan trọng vào sự thành công chung của Hội sách.
               </p>
               <p className="mt-6">
-                Quý cô chú, anh chị có thể tìm hiểu thông tin chi tiết về Hội sách và chiến dịch Gây quỹ tại website này. Nếu có bất kỳ thắc mắc, yêu cầu cung cấp thông tin hoặc mong muốn hỗ trợ, xin vui lòng liên hệ với nhóm dự án qua email: <a href="mailto:mohoimo.hoisach@gmail.com" className="underline">mohoimo.hoisach@gmail.com</a> hoặc trang fanpage Hội Sách Mơ Hỏi Mở. 
+                Quý cô chú, anh chị có thể tìm hiểu thông tin chi tiết về Hội sách và chiến dịch Gây quỹ tại website này. Nếu có bất kỳ thắc mắc, yêu cầu cung cấp thông tin hoặc mong muốn hỗ trợ, xin vui lòng liên hệ với nhóm dự án qua email: <a href="mailto:doingoai.hoisach@gmail.com" className="underline">doingoai.hoisach@gmail.com</a> hoặc trang fanpage Hội Sách Mơ Hỏi Mở. 
               </p>
               <p className="mt-6">
                 Nhóm dự án <a className="font-semibold">Hội sách Mơ hỏi Mở 2025</a> xin chân thành cảm ơn sự quan tâm và ủng hộ quý báu của quý cô chú, anh chị!
@@ -88,12 +91,9 @@ export default function Support({
         </div>
       </div>
 
-      <div className="w-full px-4 py-12">
+      <div className="w-full px-4 py-4">
         <div className="w-full bg-white overflow-hidden">
           <div className="p-8">
-            <h1 className="text-7xl font-black text-center text-[#F5AF28] mb-12">
-              DÀNH CHO NGƯỜI ỦNG HỘ
-            </h1>
             <div className="w-full max-w-6xl mx-auto">
               <div className="flex justify-between items-center mb-4">
                 <div>
@@ -201,7 +201,7 @@ export default function Support({
               <div>
                 <p className="font-bold text-[#00724D] text-3xl">Nếu có bất kỳ trục trặc nào, hãy liên hệ qua</p>
                 <ul className="list-disc pl-6 mt-3 text-2xl">
-                  <li>Email: <span className="font-semibold">mohoimo.hoisach@gmail.com</span></li>
+                  <li>Email: <a className="font-semibold" href="mailto:doingoai.hoisach@gmail.com">doingoai.hoisach@gmail.com</a></li>
                   <li>Facebook: <span className="font-semibold"><a href="https://www.facebook.com/hoisachmohoimo">Hoi Sach Mo Hoi Mo</a></span></li>
                 </ul>
               </div>
