@@ -91,7 +91,7 @@ export default function Introduction() {
         </div>
       </div>
       
-      <div className="container max-w-7xl mx-auto px-4 md:px-8 lg:px-16 py-4">
+      <div className="container max-w-8xl mx-auto px-4 md:px-8 lg:px-10 py-4 mt-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 lg:gap-6 items-center">
           <div className="prose prose-lg dark:prose-invert">
             <p className="xl:text-2xl lg:text-xl md:text-lg leading-relaxed text-justify">
@@ -102,13 +102,13 @@ export default function Introduction() {
             <img 
               src="/about_introduction_1.png" 
               alt="Hội sách Mở Hỏi Mở"
-              className="w-full md:max-w-[95%] lg:max-w-full"
+              className="w-[90%] md:max-w-[85%] lg:max-w-full"
             />
           </div>
         </div>
       </div>
 
-      <div className="w-full py-16">
+      <div className="w-full">
         <div className="bg-gradient-to-b from-white to-[#FFFCE7] py-16"></div>
         <div className="bg-[#FFFCE7]">
           <div className="container mx-auto px-4 bg-[#FFFCE7]">
@@ -132,7 +132,7 @@ export default function Introduction() {
             </div>
 
             <div className="text-center">
-              <h2 className="lg:text-7xl text-6xl font-black text-[#F5AF28] mb-12 mt-24">ĐỐI TÁC ĐỒNG HÀNH</h2>
+              <h2 className="lg:text-7xl text-6xl font-black text-[#F5AF28] mb-12 lg:mt-24 mt-12">ĐỐI TÁC ĐỒNG HÀNH</h2>
             </div>
 
           </div>

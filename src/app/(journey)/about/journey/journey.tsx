@@ -1350,7 +1350,8 @@ export default function Journey() {
       // Add a reveal animation for Season 4
       gsap.set(season4Section, { 
         opacity: 0.4, 
-        y: 40
+        y: 40,
+        backgroundColor: 'rgba(254, 249, 219, 0.05)'
       });
       
       // Create intersection observer for the Season 4 section
@@ -1364,6 +1365,7 @@ export default function Journey() {
           gsap.to(season4Section, {
             opacity: 1,
             y: 0,
+            backgroundColor: 'rgba(254, 249, 219, 0.3)',
             duration: 1,
             ease: 'power3.out'
           });
@@ -1403,6 +1405,7 @@ export default function Journey() {
           gsap.to(season4Section, {
             opacity: 0.4,
             y: 40,
+            backgroundColor: 'rgba(254, 249, 219, 0.05)',
             duration: 0.7,
             ease: 'power2.in'
           });
@@ -1682,7 +1685,7 @@ export default function Journey() {
           <div className="absolute inset-0 bg-gradient-to-b from-[#FEF9DB] to-white opacity-70 z-0"></div>
           <div className="container mx-auto px-4 mt-32 z-10 relative">
             <div className="text-center mb-12">
-              <h1 className="text-[#00724D] mb-8 text-7xl font-black">10 năm - 5 mùa Hội sách ở Bến Tre</h1>
+              <h1 className="text-[#00724D] mb-8 text-6xl font-black">10 năm - 5 mùa Hội sách ở Bến Tre</h1>
               <h1 className="text-[#00724D] text-4xl font-black mb-16">Một hành trình rực rỡ của sách, tri thức và nhiệt huyết tuổi trẻ</h1>
             </div>
             
@@ -1840,7 +1843,6 @@ export default function Journey() {
           <div className="max-w-6xl mx-auto px-6 relative z-10">
             <h2 className="text-5xl font-black text-center mb-4 text-[#00724D]">Mùa 2: Hội sách Chín Ba-phần-tư 2017</h2>
             <div className="w-24 h-1 bg-[#00724D] mx-auto mb-12 rounded-full"></div>
-            
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
               <div>
                 <p className="text-xl text-gray-700 mb-6 text-justify">
@@ -1946,11 +1948,7 @@ export default function Journey() {
               </div>
             </div>
           </div>
-          <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent w-full z-10">
-            <div className="absolute inset-0 opacity-10 bg-[url('/journey-materials/ss2/logo2.jpg')] bg-repeat-x bg-bottom bg-contain mix-blend-overlay"></div>
-            <div className="absolute bottom-0 left-0 right-0 h-12 overflow-hidden">
-            </div>
-          </div>
+          <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent"></div>
         </section>
 
         <section id="season3" className="season-section min-h-screen py-24 relative bg-white" data-speed="1.1">
@@ -1990,7 +1988,6 @@ export default function Journey() {
             <div id="season3-gallery" className="season3-gallery w-full py-12 min-h-[80vh] overflow-hidden">
               <div className="sticky top-[120px] max-w-6xl mx-auto">
                 <h3 className="text-3xl font-bold mb-10 text-[#00724D] relative after:content-[''] after:absolute after:bottom-[-8px] after:left-0 after:h-[3px] after:bg-[#00724D] after:w-[80px] after:rounded-full">Hoạt động nổi bật</h3>
-                
                 <div className="season3-images-container w-full pb-8 pt-4" ref={season3GalleryRef}>
                   <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
                     {season3Images.slice(0, 6).map((image, index) => (
@@ -2167,19 +2164,12 @@ export default function Journey() {
         </section>
 
         <section id="season4" className="season-section min-h-screen py-8 relative" data-speed="1.1">
+          <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-white to-[#FEF9DB]/10 w-full"></div>
           <div className="max-w-6xl mx-auto px-6 relative z-10">
-            <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-white to-[#FEF9DB]/10 w-full"></div>
             <h2 className="relative text-5xl font-black text-center mb-4 text-[#00724D]">Mùa 4: Hội sách Mơ Hỏi Mở 2023</h2>
             <div className="w-24 h-1 bg-[#00724D] mx-auto mb-12 rounded-full"></div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-              <div className="aspect-square bg-gray-200 rounded-lg shadow-md overflow-hidden transform transition-all hover:shadow-xl duration-300">
-                <img 
-                  src="/journey-materials/ss4/logo4.jpg"  
-                  alt="Mùa Hội sách thứ tư" 
-                  className="w-full h-full object-cover"
-                />
-              </div>
               <div>
                 <p className="text-xl text-gray-700 mb-6 text-justify">
                   Một không gian mở cho những tâm hồn mơ màng và đầy khát khao. Mùa 4 này không chỉ để đọc, mà còn để hỏi, để mơ, để tìm thấy chính mình qua từng câu chuyện - và để biết rằng, đọc sách cũng là một hành trình rất riêng. 
@@ -2198,12 +2188,18 @@ export default function Journey() {
                   </ul>
                 </p>
               </div>
+              <div className="aspect-square bg-gray-200 rounded-lg shadow-md overflow-hidden transform transition-all hover:shadow-xl duration-300">
+                <img 
+                  src="/journey-materials/ss4/logo4.jpg"  
+                  alt="Mùa Hội sách thứ tư" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
             </div>
             
-            <div id="season4-gallery" className="season4-gallery w-full py-12 min-h-[80vh] overflow-hidden">
+            <div id="season4-gallery" className="season4-gallery w-full py-12 min-h-[80vh] overflow-hidden bg-gradient-to-b from-[#FEF9DB]/10 to-transparent relative">
               <div className="sticky top-[120px] max-w-6xl mx-auto">
                 <h3 className="text-3xl font-bold mb-10 text-[#00724D] relative after:content-[''] after:absolute after:bottom-[-8px] after:left-0 after:h-[3px] after:bg-[#00724D] after:w-[80px] after:rounded-full">Hoạt động nổi bật</h3>
-                
                 <div className="season4-images-container w-full pb-8 pt-4" ref={season4GalleryRef}>
                   <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
                     {season4Images.slice(0, 6).map((image, index) => (
@@ -2360,7 +2356,7 @@ export default function Journey() {
               </div>
             </div>
           </div>
-          <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-transparent to-white w-full"></div>
+          <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-[#FEF9DB]/10 to-white"></div>
         </section>
 
         <section id="season5" className="season-section min-h-screen py-8 relative bg-white" data-speed="1.1">
@@ -2407,10 +2403,24 @@ export default function Journey() {
             <p className="text-xl text-gray-700">Là biết bao giấc mơ âm thầm được ươm mầm để rồi bừng nở đầy rực rỡ</p>
             <p className="text-xl text-gray-700">Và tụi mình tin rằng...</p>
             <p className="text-xl text-gray-700">Hành trình này vẫn sẽ tiếp tục - với nhiều điều bí ẩn đang chờ phía trước.</p>
-            <p className="text-xl text-gray-700 mb-12">Tụi mình sẽ đi - bằng tất cả đam mê và cả niềm tin vào những điều tốt đẹp. với tụi mình, mỗi mùa hội sách không chỉ là sự kiện – mà là một lời hẹn. Với tri thức. Với cộng đồng. Và với chính những giấc mơ thuở đầu.</p>
+            <p className="text-xl text-gray-700 mb-12">Tụi mình sẽ đi - bằng tất cả đam mê và cả niềm tin vào những điều tốt đẹp. với tụi mình, mỗi mùa hội sách không chỉ là sự kiện - mà là một lời hẹn. Với tri thức. Với cộng đồng. Và với chính những giấc mơ thuở đầu.</p>
             
-            {/* <a href="#" className="inline-block bg-[#00724D] text-white py-3 px-8 rounded-full font-bold text-lg shadow-lg hover:shadow-xl transform transition-all duration-300 hover:-translate-y-1">
-              Tham gia cùng chúng tôi
+            <button 
+              onClick={() => {
+                window.scrollTo({
+                  top: 0,
+                  behavior: 'smooth'
+                });
+              }}
+              className="bg-[#00724D] text-white py-3 px-8 rounded-full font-bold text-lg shadow-lg hover:shadow-xl transform transition-all duration-300 hover:-translate-y-1 mb-12 flex items-center gap-2 mx-auto"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-chevron-up">
+                <path d="m18 15-6-6-6 6"/>
+              </svg>
+              Quay lại đầu trang
+            </button>
+            {/* <a href="#" className="inline-block bg-[#00724D] text-white py-3 px-8 rounded-full font-bold text-lg shadow-lg hover:shadow-xl transform transition-all duration-300 hover:-translate-y-1 mb-12">
+              Quay lại đầu trang
             </a> */}
           </div>
         </section>
