@@ -37,11 +37,11 @@ export default function Support({
   return (
     <div className="w-full bg-white text-black dark:bg-zinc-900 dark:text-white">
       <div className="w-full bg-gradient-to-b from-[#FFFCE7] to-white">
-        <div className="w-full mx-auto p-18">
-          <h1 className="text-7xl font-black text-center text-[#F5AF28] mb-12">
+        <div className="w-full mx-auto p-4 md:p-8 lg:p-18">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl mt-4 lg:mt-0 font-black text-center text-[#F5AF28] mb-6 md:mb-12">
               DÀNH CHO NGƯỜI ỦNG HỘ
           </h1>
-          <h1 className="text-4xl font-black text-left mb-8">
+          <h1 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-black text-left mb-8">
             📩  Thư ngỏ từ Nhóm Dự án Hội sách Mơ Hỏi Mở 2025
           </h1>
           
@@ -98,13 +98,13 @@ export default function Support({
               <div className="flex justify-between items-center mb-4">
                 <div>
                   <span className="font-medium text-green-700 text-lg">Đã ủng hộ</span>
-                  <p className="text-3xl font-bold">
+                  <p className="text-xl md:text-3xl font-bold">
                     {totalAmount.toLocaleString()} đ
                   </p>
                 </div>
                 <div className="text-right">
                   <span className="font-medium text-green-700 text-lg">Mục tiêu</span>
-                  <p className="text-3xl font-bold">
+                  <p className="text-xl md:text-3xl font-bold">
                     {targetAmount.toLocaleString()} đ
                   </p>
                 </div>
@@ -127,15 +127,15 @@ export default function Support({
       
       <div className="w-full py-16 bg-gradient-to-b from-white to-[#E4F7FF] via-[#f7fcff]">
         <div className="max-w-7xl mx-auto px-4">
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-center text-[#F5AF28] mb-14">
+          <h1 className="text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-center text-[#F5AF28] mb-14">
             CÁCH THỨC ĐÓNG GÓP
           </h1>
           
           <div className="flex flex-col lg:flex-row items-center gap-10">
             <div className="lg:w-3/5 space-y-8">
               <div>
-                <h3 className="text-3xl font-bold text-[#00724D] mb-4">1. Chuyển khoản đến</h3>
-                <ul className="list-disc pl-6 space-y-3 text-2xl">
+                <h3 className="text-2xl md:text-3xl font-bold text-[#00724D] mb-4">1. Chuyển khoản đến</h3>
+                <ul className="list-disc pl-6 space-y-3 text-xl md:text-2xl">
                   <li>Ngân hàng: <span className="font-semibold">BIDV</span></li>
                   <li>Chủ tài khoản: <span className="font-semibold">CAU LAC BO SACH BEN TRE</span></li>
                   <li>Số tài khoản: <span className="font-semibold">8680059374</span></li>
@@ -144,7 +144,7 @@ export default function Support({
               </div>
 
               <div>
-                <h3 className="text-3xl font-bold text-[#00724D] mb-4 flex items-center">
+                <h3 className="text-2xl md:text-3xl font-bold text-[#00724D] mb-4 flex items-center">
                   2. Quét mã QR 
                   <Dialog>
                     <DialogTrigger>
@@ -158,9 +158,13 @@ export default function Support({
                         </DialogDescription>
                       </DialogHeader>
                       <div className="flex items-center justify-center p-6">
-                        <div className="border-2 border-dashed border-gray-300 rounded-lg p-8 flex items-center justify-center">
-                          <div className="text-lg font-medium text-gray-600">QR HERE</div>
-                        </div>
+                        <Image 
+                          src="/QRCode.jpg" 
+                          alt="QR Code Chuyển khoản" 
+                          width={300} 
+                          height={300} 
+                          className="rounded-lg shadow-lg"
+                        />
                       </div>
                       <DialogFooter className="flex sm:items-center sm:justify-center">
                         <DialogClose asChild>
@@ -184,7 +188,7 @@ export default function Support({
 
               <div>
                 <div className="flex items-center mb-3">
-                  <span className="text-3xl font-bold mr-2 text-[#00724D]">DANH SÁCH ỦNG HỘ</span>
+                  <span className="text-2xl md:text-3xl font-bold mr-2 text-[#00724D]">DANH SÁCH ỦNG HỘ</span>
                   <Button
                     className="bg-[#00724D] text-white hover:bg-[#005f3d] rounded-full px-4 py-2 font-semibold"
                     onClick={() => {
@@ -194,13 +198,13 @@ export default function Support({
                     Xem tại đây
                   </Button>
                 </div>
-                <p className="text-gray-700 text-2xl">(được cập nhật vào 19h00 thứ 2, 4, 6 hàng tuần)</p>
-                <p className="text-2xl mt-2"><a className="font-semibold">KHÔNG</a> cần gửi ảnh chuyển khoản.</p>
+                <p className="text-gray-700 text-xl md:text-2xl">(được cập nhật vào 19h00 thứ 2, 4, 6 hàng tuần)</p>
+                <p className="text-xl md:text-2xl mt-2"><a className="font-semibold">KHÔNG</a> cần gửi ảnh chuyển khoản.</p>
               </div>
 
               <div>
-                <p className="font-bold text-[#00724D] text-3xl">Nếu có bất kỳ trục trặc nào, hãy liên hệ qua</p>
-                <ul className="list-disc pl-6 mt-3 text-2xl">
+                <p className="font-bold text-[#00724D] text-2xl md:text-3xl">Nếu có bất kỳ trục trặc nào, hãy liên hệ qua</p>
+                <ul className="list-disc pl-6 mt-3 text-xl md:text-2xl">
                   <li>Email: <a className="font-semibold" href="mailto:doingoai.hoisach@gmail.com">doingoai.hoisach@gmail.com</a></li>
                   <li>Facebook: <span className="font-semibold"><a href="https://www.facebook.com/hoisachmohoimo">Hoi Sach Mo Hoi Mo</a></span></li>
                 </ul>

@@ -51,7 +51,7 @@ export function Footer() {
             <img
               src="/footer.png"
               alt="Mơ Hỏi Mở Characters"
-              className="object-contain h-full w-auto scale-200"
+              className="object-contain h-full w-auto scale-150 md:scale-150 lg:scale-175 xl:scale-200"
             />
           </div>
         </div>

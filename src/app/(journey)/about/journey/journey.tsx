@@ -6,6 +6,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ScrollSmoother } from 'gsap/ScrollSmoother';
 import { Dialog, DialogContent, DialogTrigger, DialogClose } from "@/components/ui/dialog";
 import { X } from "lucide-react";
+import { Footer } from "@/layout/footer";
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
@@ -47,6 +48,12 @@ export default function Journey() {
   ];
   
   const season4Images = [
+    { src: "/journey-materials/ss4/ss4-10.jpg", alt: "Mùa 4 - Ảnh 10" },
+    { src: "/journey-materials/ss4/ss4-11.jpg", alt: "Mùa 4 - Ảnh 11" },
+    { src: "/journey-materials/ss4/ss4-12.jpg", alt: "Mùa 4 - Ảnh 12" },
+    { src: "/journey-materials/ss4/ss4-13.jpg", alt: "Mùa 4 - Ảnh 13" },
+    { src: "/journey-materials/ss4/ss4-14.jpg", alt: "Mùa 4 - Ảnh 14" },
+    { src: "/journey-materials/ss4/ss4-15.jpg", alt: "Mùa 4 - Ảnh 15" },
     { src: "/journey-materials/ss4/ss4-1.jpg", alt: "Mùa 4 - Ảnh 1" },
     { src: "/journey-materials/ss4/ss4-2.jpg", alt: "Mùa 4 - Ảnh 2" },
     { src: "/journey-materials/ss4/ss4-3.jpg", alt: "Mùa 4 - Ảnh 3" },
@@ -56,12 +63,6 @@ export default function Journey() {
     { src: "/journey-materials/ss4/ss4-7.jpg", alt: "Mùa 4 - Ảnh 7" },
     { src: "/journey-materials/ss4/ss4-8.jpg", alt: "Mùa 4 - Ảnh 8" },
     { src: "/journey-materials/ss4/ss4-9.jpg", alt: "Mùa 4 - Ảnh 9" },
-    { src: "/journey-materials/ss4/ss4-10.jpg", alt: "Mùa 4 - Ảnh 10" },
-    { src: "/journey-materials/ss4/ss4-11.jpg", alt: "Mùa 4 - Ảnh 11" },
-    { src: "/journey-materials/ss4/ss4-12.jpg", alt: "Mùa 4 - Ảnh 12" },
-    { src: "/journey-materials/ss4/ss4-13.jpg", alt: "Mùa 4 - Ảnh 13" },
-    { src: "/journey-materials/ss4/ss4-14.jpg", alt: "Mùa 4 - Ảnh 14" },
-    { src: "/journey-materials/ss4/ss4-15.jpg", alt: "Mùa 4 - Ảnh 15" },
     { src: "/journey-materials/ss4/ss4-16.jpg", alt: "Mùa 4 - Ảnh 16" },
     { src: "/journey-materials/ss4/ss4-17.jpg", alt: "Mùa 4 - Ảnh 17" },
     { src: "/journey-materials/ss4/ss4-18.jpg", alt: "Mùa 4 - Ảnh 18" },
@@ -1685,21 +1686,21 @@ export default function Journey() {
           <div className="absolute inset-0 bg-gradient-to-b from-[#FEF9DB] to-white opacity-70 z-0"></div>
           <div className="container mx-auto px-4 mt-32 z-10 relative">
             <div className="text-center mb-12">
-              <h1 className="text-[#00724D] mb-8 text-6xl font-black">10 năm - 5 mùa Hội sách ở Bến Tre</h1>
-              <h1 className="text-[#00724D] text-4xl font-black mb-16">Một hành trình rực rỡ của sách, tri thức và nhiệt huyết tuổi trẻ</h1>
+              <h1 className="text-[#F5AF28] mb-4 lg:mb-8 text-3xl mb:text-4xl lg:text-5xl xl:text-6xl font-black">10 NĂM - 5 MÙA HỘI SÁCH Ở BẾN TRE</h1>
+              <h1 className="text-[#F5AF28] text-3xl mb:text-4xl font-black lg:mb-8 xl:mb-16">Một hành trình rực rỡ của sách, tri thức và nhiệt huyết tuổi trẻ</h1>
             </div>
             
-            <div className="max-w-5xl mx-auto">
-              <p className="text-xl text-justify mb-8 text-gray-700 font-normal">
+            <div className="max-w-6xl mx-auto text-xl text-justify text-gray-700 font-normal">
+              <p className="mb-4 lg:mb-6 xl:mb-8">
                 2015, tụi mình, những thành viên của nhóm Tôi vào Đại học - đã bắt đầu hành trình này với một ước mơ rất giản đơn: đưa sách về gần hơn với các bạn học sinh quê nhà. Và thế là, mùa hội sách đầu tiên ra đời - nhỏ xinh mà chan chứa yêu thương. 
               </p>
-              <p className="text-xl text-justify mb-8 text-gray-700 font-normal">
+              <p className="mb-4 lg:mb-6 xl:mb-8">
                 Rồi những năm tiếp theo, 2017, 2019, hội sách được tụi mình vẽ thêm những sắc màu mới hơn: trò chơi sáng tạo, buổi trò chuyện đáng nhớ, góc đọc sách xinh xắn… Tất cả lớn dần cùng tình yêu dành cho sách và cho nhau.
               </p>
-              <p className="text-xl text-justify mb-8 text-gray-700 font-normal">
+              <p className="mb-4 lg:mb-6 xl:mb-8">
                 Đến 2023, hội sách "Mơ Hỏi Mở" chính thức chào đời, là sự kết hợp đặc biệt giữa nhóm Tôi Dám Thay Đổi và dự án Milibri. Đây không chỉ là nơi trưng bày sách, mà còn là không gian để ai cũng có thể "chạm" vào sách theo cách của riêng mình - nhẹ nhàng, gần gũi nhưng cũng không kém phần bất ngờ.
               </p>
-              <p className="text-xl text-justify mb-8 text-gray-700 font-normal">
+              <p className="mb-4 lg:mb-6 xl:mb-8">
                 Và năm 2025 này, tụi mình lại tiếp tục đồng hành - thêm nhiều ý tưởng mới mẻ hơn, nhiều kết nối sâu sắc hơn, để tri thức và những giấc mơ cứ thế lan tỏa khắp Bến Tre thân thương.
               </p>
             </div>
@@ -1764,9 +1765,6 @@ export default function Journey() {
                         className="w-full h-[400px] object-cover"
                       />
                     </div>
-                    <div className="absolute bottom-4 right-4 bg-white/80 backdrop-blur-sm px-3 py-1 rounded-md text-sm text-gray-700 font-medium image-caption">
-                      Không gian “Lắng nghe sách nói”
-                    </div>
                   </div>
                   
                   <div className="gallery-item w-full bg-white rounded-lg shadow-lg overflow-hidden transform transition-all duration-300 hover:shadow-xl relative cursor-pointer hover:scale-105"
@@ -1779,9 +1777,6 @@ export default function Journey() {
                         className="w-full h-[400px] object-cover"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                    </div>
-                    <div className="absolute bottom-4 right-4 bg-white/80 backdrop-blur-sm px-3 py-1 rounded-md text-sm text-gray-700 font-medium image-caption">
-                      Tham gia làm sản phẩm thủ công từ lá dừa
                     </div>
                   </div>
                   
@@ -1796,9 +1791,6 @@ export default function Journey() {
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     </div>
-                    <div className="absolute bottom-4 right-4 bg-white/80 backdrop-blur-sm px-3 py-1 rounded-md text-sm text-gray-700 font-medium image-caption">
-                      Chụp ảnh tại khu vực Kết nối “Tôi vào Đại học”
-                    </div>
                   </div>
                   
                   <div className="gallery-item w-full bg-white rounded-lg shadow-lg overflow-hidden transform transition-all duration-300 hover:shadow-xl relative cursor-pointer hover:scale-105"
@@ -1812,9 +1804,6 @@ export default function Journey() {
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     </div>
-                    <div className="absolute bottom-4 right-4 bg-white/80 backdrop-blur-sm px-3 py-1 rounded-md text-sm text-gray-700 font-medium image-caption">
-                      Tham quan và mua sắm tại Con đường sách
-                    </div>
                   </div>
                   
                   <div className="gallery-item w-full bg-white rounded-lg shadow-lg overflow-hidden transform transition-all duration-300 hover:shadow-xl relative md:col-span-2 cursor-pointer hover:scale-105"
@@ -1827,9 +1816,6 @@ export default function Journey() {
                         className="w-full h-[400px] object-cover"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                    </div>
-                    <div className="absolute bottom-4 right-4 bg-white/80 backdrop-blur-sm px-3 py-1 rounded-md text-sm text-gray-700 font-medium image-caption">
-                      Tham gia cuộc thi Rung chuông vàng
                     </div>
                   </div>
                 </div>
@@ -1935,7 +1921,7 @@ export default function Journey() {
                           <img 
                             src="/journey-materials/ss2/ss2-5.jpg" 
                             alt="Mùa 2 - Ảnh 5" 
-                            className="w-full h-[300px] object-cover"
+                            className="w-full h-[400px] object-cover"
                           />
                           <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 cursor-pointer"
                             onClick={() => setSelectedImage('/journey-materials/ss2/ss2-5.jpg')}
@@ -1967,7 +1953,7 @@ export default function Journey() {
               </div>
               <div>
                 <p className="text-xl text-gray-700 mb-6 text-justify">
-                  Lấy cảm hứng từ thế giới phép thuật, mùa 2 là một cuộc phiêu lưu kỳ thú với sách, nơi những người bạn “phù thủy tri thức” gặp nhau, chơi hết mình và học điều hay theo cách không ai ngờ tới.
+                  Chong chóng quay, gió thổi mát, ước mơ cất cánh theo từng trang sách. Mùa 3 là một lời nhắn gửi dịu dàng: sách luôn là người bạn đồng hành lặng lẽ nhưng vững vàng trên hành trình lớn lên của tụi mình.
                 </p>
                 <p className="text-xl text-gray-700 mb-6">
                   <a className="font-bold">Ngày tổ chức:</a> 31/03/2019
@@ -2365,7 +2351,7 @@ export default function Journey() {
             <h2 className="text-5xl font-black text-center mb-4 text-[#00724D] opacity-0 transform translate-y-10 transition-all duration-700" ref={season5TitleRef}>Mùa 5: Hội sách Mơ Hỏi Mở 2025</h2>
             <div className="w-24 h-1 bg-[#00724D] mx-auto mb-12 rounded-full opacity-0 transform scale-x-0 transition-all duration-700 delay-100" ref={season5DividerRef}></div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 items-center">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
               <div className="aspect-square bg-gray-200 rounded-lg shadow-md overflow-hidden transform transition-all duration-700 hover:shadow-xl opacity-0 translate-x-[-50px]" ref={season5ImageRef}>
                 <img 
                   src="/journey-materials/logo5.jpg"  
@@ -2373,7 +2359,7 @@ export default function Journey() {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="opacity-0 translate-x-[50px] transition-all duration-700" ref={season5ContentRef}>
+              <div className="opacity-0 translate-x-[50px] transition-all duration-700 mt-6 md:mt-0" ref={season5ContentRef}>
                 <div className="relative">
                   <p className="text-4xl font-black text-gray-700 mb-8 text-center bg-gradient-to-r from-[#00724D] via-[#4ade80] to-[#00724D] bg-clip-text animate-pulse">
                     Đang làm nè!!!
@@ -2384,7 +2370,7 @@ export default function Journey() {
                     <span className="inline-block w-3 h-3 bg-[#00724D] rounded-full animate-bounce" style={{animationDelay: '300ms'}}></span>
                   </div>
                   <p className="text-lg text-gray-600 text-center">
-                    Hội sách sẽ diễn ra vào tháng 7/2025
+                    Sự kiện sẽ diễn ra vào tháng 7/2025
                   </p>
                 </div>
               </div>
@@ -2393,38 +2379,59 @@ export default function Journey() {
           {/* <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[#FEF9DB]/30 to-transparent w-full"></div> */}
         </section>
         
-        <section id="final" className="journey-future py-4 bg-gradient-to-b from-white to-[#FEF9DB]/30" data-speed="1.1">
-          <div className="max-w-6xl mx-auto text-center px-4">
-            <h2 className="text-6xl font-bold text-[#00724D]">10 năm - 5 mùa</h2>
-            <h2 className="text-4xl font-bold text-[#00724D] mb-4">không chỉ là một cột mốc - mà là cả một câu chuyện dài đầy cảm hứng</h2>
-            <div className="w-20 h-1 bg-[#00724D] mx-auto mb-8 rounded-full opacity-70"></div>
-            <p className="text-xl text-gray-700">Là tình yêu dành cho sách được nuôi dưỡng qua từng mùa hội.</p>
-            <p className="text-xl text-gray-700">Là những thế hệ gặp nhau, gắn kết với bằng tri thức và niềm hăng say</p>
-            <p className="text-xl text-gray-700">Là biết bao giấc mơ âm thầm được ươm mầm để rồi bừng nở đầy rực rỡ</p>
-            <p className="text-xl text-gray-700">Và tụi mình tin rằng...</p>
-            <p className="text-xl text-gray-700">Hành trình này vẫn sẽ tiếp tục - với nhiều điều bí ẩn đang chờ phía trước.</p>
-            <p className="text-xl text-gray-700 mb-12">Tụi mình sẽ đi - bằng tất cả đam mê và cả niềm tin vào những điều tốt đẹp. với tụi mình, mỗi mùa hội sách không chỉ là sự kiện - mà là một lời hẹn. Với tri thức. Với cộng đồng. Và với chính những giấc mơ thuở đầu.</p>
-            
-            <button 
-              onClick={() => {
-                window.scrollTo({
-                  top: 0,
-                  behavior: 'smooth'
-                });
-              }}
-              className="bg-[#00724D] text-white py-3 px-8 rounded-full font-bold text-lg shadow-lg hover:shadow-xl transform transition-all duration-300 hover:-translate-y-1 mb-12 flex items-center gap-2 mx-auto"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-chevron-up">
-                <path d="m18 15-6-6-6 6"/>
-              </svg>
-              Quay lại đầu trang
-            </button>
-            {/* <a href="#" className="inline-block bg-[#00724D] text-white py-3 px-8 rounded-full font-bold text-lg shadow-lg hover:shadow-xl transform transition-all duration-300 hover:-translate-y-1 mb-12">
-              Quay lại đầu trang
-            </a> */}
+        <section id="final" className="journey-future py-12 bg-gradient-to-b from-white to-[#FEF9DB]/30" data-speed="1.1">
+          <div className="max-w-6xl mx-auto px-4 relative">
+            <div className="relative rounded-xl">
+              <img 
+                src="/journey-materials/ht10.png" 
+                alt="10 năm hành trình" 
+                className="hidden md:block w-full h-auto scale-120"
+              />
+              <img 
+                src="/journey-materials/ht10-phone.png" 
+                alt="10 năm hành trình" 
+                className="block md:hidden w-full h-auto scale-120"
+              />
+              {/* <div className="absolute inset-0 flex flex-col justify-end px-8 xl:p-12 lg:px-16 text-justify">
+                <div className="text-[#00724D] text-2xl lg:text-3xl xl:text-4xl font-bold drop-shadow-lg text-center">
+                  <h2 className="lg:mb-4">10 năm - 5 mùa</h2>
+                  <h3 className="lg:mb-4">không chỉ là một cột mốc,</h3>
+                  <h3 className="lg:mb-6">mà là cả một câu chuyện dài đầy cảm hứng.</h3>
+                </div>
+                <div className="w-20 h-1 bg-white mx-auto mb-3 lg:mb-6 rouned-full opacity-80"></div>
+                <div className="mx-auto space-y-3/90">
+                  <p className="text-md lg:text-xl">Là tình yêu dành cho sách được nuôi dưỡng qua từng mùa hội.</p>
+                  <p className="text-md lg:text-xl">Là những thế hệ gặp nhau, gắn kết với bằng tri thức và niềm hăng say</p>
+                  <p className="text-md lg:text-xl mb-4">Là biết bao giấc mơ âm thầm được ươm mầm để rồi bừng nở đầy rực rỡ</p>
+                  <p className="text-md lg:text-xl">Và tụi mình tin rằng...</p>
+                  <p className="text-md lg:text-xl">Hành trình này vẫn sẽ tiếp tục - với nhiều điều bí ẩn đang chờ phía trước.</p>
+                  <p className="text-md lg:text-xl">Tụi mình sẽ đi - bằng tất cả đam mê và cả niềm tin vào những điều tốt đẹp. với tụi mình, mỗi mùa hội sách không chỉ là sự kiện - mà là một lời hẹn. Với tri thức. Với cộng đồng. Và với chính những giấc mơ thuở đầu.</p>
+                </div>
+              </div> */}
+            </div>
           </div>
         </section>
+        {/* <a href="#" className="inline-block bg-[#00724D] text-white py-3 px-8 rounded-full font-bold text-lg shadow-lg hover:shadow-xl transform transition-all duration-300 hover:-translate-y-1 mb-12">
+          Quay lại đầu trang
+        </a> */}
       </div>
+      <div className="fixed bottom-4 right-4 z-50">
+        <button 
+          onClick={() => {
+            window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+            });
+          }}
+          className="bg-[#00724D] hover:bg-[#00724D]/90 text-white py-3 px-3 rounded-full font-bold text-lg shadow-lg hover:shadow-xl transform transition-all duration-300 hover:-translate-y-1 flex items-center justify-center"
+          aria-label="Scroll to top"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-chevron-up">
+            <path d="m18 15-6-6-6 6"/>
+          </svg>
+        </button>
+      </div>
+      <Footer />
     </div>
   )
 }
