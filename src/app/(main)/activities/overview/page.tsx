@@ -9,10 +9,10 @@ export const metadata: Metadata = {
 export default function ActivitiesPage() {
   return (
     <div className="flex flex-col items-center justify-center bg-white text-black dark:bg-zinc-900 dark:text-white">
-      <p className="text-[#F5AF28] text-7xl font-black mt-20">
+      <p className="text-[#F5AF28] text-4xl md:text-6xl lg:text-7xl font-black mt-20">
         CÓ GÌ TẠI HỘI SÁCH?
       </p>
-      <p className="text-4xl font-light mt-10">
+      <p className="text-xl md:text-3xl lg:text-4xl font-light py-10">
         Chờ xíu nha, tụi mình bật mí liền nè ~
       </p>
     </div>

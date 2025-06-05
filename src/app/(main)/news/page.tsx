@@ -29,7 +29,7 @@ export default function NewsPage() {
 	},
 	{
 	  title: "Hơn 4.000 đầu sách dành cho teen tại Bến Tre",
-	  source: "Báo Mặt Trời",
+	  source: "Báo Mực Tím",
 	  link: "https://muctim.tuoitre.vn/hon-4000-dau-sach-danh-cho-teen-tai-hoi-sach-mo-hoi-mo-101230714151246103.htm",
 	},
 	{
@@ -38,7 +38,7 @@ export default function NewsPage() {
 		link: "https://znews.vn/hoi-sach-cho-ban-tre-ben-tre-post1446305.html",
 	},
 	{
-	  title: "Ngày hội sách Mơ Hỏi Mở và cuộc thi 'Tôm sách' dành cho học sinh Bến Tre",
+	  title: "Ngày hội sách Mơ Hỏi Mở và cuộc thi 'Tóm sách' dành cho học sinh Bến Tre",
 	  source: "Báo Thanh Niên",
 	  link: "https://thanhnien.vn/ngay-hoi-sach-mo-hoi-mo-va-cuoc-thi-tom-sach-danh-cho-hoc-sinh-ben-tre-185230718154252475.htm",
 	},
