@@ -7,9 +7,9 @@ export function Footer() {
   return (
     <footer className="bg-[#E6FFE2] py-8 relative w-full overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 relative z-20">
-        <div className="flex flex-col md:flex-row gap-10 md:gap-4">
+        <div className="flex flex-col md:flex-row md:gap-4">
           <div className="w-full md:w-4/5 flex flex-col">
-            <h2 className="text-[#00724D] text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black tracking-wide mb-6 md:mb-4 w-full text-center md:text-left leading-tight">
+            <h2 className="whitespace-nowrap text-[#00724D] text-xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black tracking-wide mb-6 md:mb-4 w-full text-center md:text-left leading-tight">
               HỘI SÁCH MƠ HỎI MỞ 2025
             </h2>
             
@@ -51,7 +51,7 @@ export function Footer() {
             <img
               src="/footer.png"
               alt="Mơ Hỏi Mở Characters"
-              className="object-contain h-full w-auto scale-150 md:scale-150 lg:scale-175 xl:scale-200"
+              className="object-contain h-full w-auto scale-90 md:scale-120 lg:scale-100"
             />
           </div>
         </div>
