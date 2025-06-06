@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description: "Manage your funding data here.",
 };
 
-const FUNDING_GOAL = 40000000;
+const FUNDING_GOAL = 30000000;
 
 async function getTotalFunding() {
   'use server'

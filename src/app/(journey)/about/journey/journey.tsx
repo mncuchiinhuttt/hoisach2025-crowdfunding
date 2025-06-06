@@ -1716,9 +1716,9 @@ export default function Journey() {
           </div>
         </section>
         
-        <section id="season1" className="season-section min-h-screen relative" data-speed="1.1">
+        <section id="season1" className="season-section min-h-screen relative" data-speed="1.0">
           <div className="top-0 bg-white py-8 z-10">
-            <h2 className="text-5xl font-black text-center text-[#00724D]">Mùa 1: Hội sách Đa Sắc Thái 2015</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-center text-[#00724D]">Mùa 1: Hội sách Đa Sắc Thái 2015</h2>
             <div className="w-24 h-1 bg-[#00724D] mx-auto mt-4 rounded-full"></div>
           </div>
           
@@ -1824,10 +1824,10 @@ export default function Journey() {
           </div>
         </section>
         
-        <section id="season2" className="season-section min-h-screen py-24 relative" data-speed="1.1">
+        <section id="season2" className="season-section min-h-screen py-24 relative" data-speed="1.0">
           <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-white to-[#FEF9DB]/10 w-full"></div>
           <div className="max-w-6xl mx-auto px-6 relative z-10">
-            <h2 className="text-5xl font-black text-center mb-4 text-[#00724D]">Mùa 2: Hội sách Chín Ba-phần-tư 2017</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-center mb-4 text-[#00724D]">Mùa 2: Hội sách Chín Ba-phần-tư 2017</h2>
             <div className="w-24 h-1 bg-[#00724D] mx-auto mb-12 rounded-full"></div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
               <div>
@@ -1937,10 +1937,10 @@ export default function Journey() {
           <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent"></div>
         </section>
 
-        <section id="season3" className="season-section min-h-screen py-24 relative bg-white" data-speed="1.1">
+        <section id="season3" className="season-section min-h-screen py-24 relative bg-white" data-speed="1.0">
           <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-white w-full"></div>
           <div className="max-w-6xl mx-auto px-6 relative z-10">
-            <h2 className="text-5xl font-black text-center mb-4 text-[#00724D]">Mùa 3: Hội sách Chong chóng tre 2019</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-center mb-4 text-[#00724D]">Mùa 3: Hội sách Chong chóng tre 2019</h2>
             <div className="w-24 h-1 bg-[#00724D] mx-auto mb-12 rounded-full"></div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
@@ -2149,10 +2149,10 @@ export default function Journey() {
           </div>
         </section>
 
-        <section id="season4" className="season-section min-h-screen py-8 relative" data-speed="1.1">
+        <section id="season4" className="season-section min-h-screen py-8 relative" data-speed="1.0">
           <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-white to-[#FEF9DB]/10 w-full"></div>
           <div className="max-w-6xl mx-auto px-6 relative z-10">
-            <h2 className="relative text-5xl font-black text-center mb-4 text-[#00724D]">Mùa 4: Hội sách Mơ Hỏi Mở 2023</h2>
+            <h2 className="relative text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-center mb-4 text-[#00724D]">Mùa 4: Hội sách Mơ Hỏi Mở 2023</h2>
             <div className="w-24 h-1 bg-[#00724D] mx-auto mb-12 rounded-full"></div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
@@ -2345,10 +2345,10 @@ export default function Journey() {
           <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-[#FEF9DB]/10 to-white"></div>
         </section>
 
-        <section id="season5" className="season-section min-h-screen py-8 relative bg-white" data-speed="1.1">
+        <section id="season5" className="season-section min-h-screen py-8 relative bg-white" data-speed="1.0">
           <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-white w-full"></div>
           <div className="max-w-6xl mx-auto px-6 relative z-10">
-            <h2 className="text-5xl font-black text-center mb-4 text-[#00724D] opacity-0 transform translate-y-10 transition-all duration-700" ref={season5TitleRef}>Mùa 5: Hội sách Mơ Hỏi Mở 2025</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-center mb-4 text-[#00724D] opacity-0 transform translate-y-10 transition-all duration-700" ref={season5TitleRef}>Mùa 5: Hội sách Mơ Hỏi Mở 2025</h2>
             <div className="w-24 h-1 bg-[#00724D] mx-auto mb-12 rounded-full opacity-0 transform scale-x-0 transition-all duration-700 delay-100" ref={season5DividerRef}></div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
@@ -2379,48 +2379,35 @@ export default function Journey() {
           {/* <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[#FEF9DB]/30 to-transparent w-full"></div> */}
         </section>
         
-        <section id="final" className="journey-future py-12 bg-gradient-to-b from-white to-[#FEF9DB]/30" data-speed="1.1">
-          <div className="max-w-6xl mx-auto px-4 relative">
-            <div className="relative rounded-xl">
+        <section id="final" className="journey-future bg-gradient-to-b from-white to-[#FEF9DB]/30" data-speed="1.0">
+          <div className="max-w-6xl mx-auto px-4">
+            <div className="rounded-xl">
               <img 
                 src="/journey-materials/ht10.png" 
                 alt="10 năm hành trình" 
-                className="hidden md:block w-full h-auto scale-120"
+                className="hidden md:block w-full h-auto"
               />
               <img 
                 src="/journey-materials/ht10-phone.png" 
                 alt="10 năm hành trình" 
-                className="block md:hidden w-full h-auto scale-120"
+                className="block md:hidden w-full h-auto"
               />
-              {/* <div className="absolute inset-0 flex flex-col justify-end px-8 xl:p-12 lg:px-16 text-justify">
-                <div className="text-[#00724D] text-2xl lg:text-3xl xl:text-4xl font-bold drop-shadow-lg text-center">
-                  <h2 className="lg:mb-4">10 năm - 5 mùa</h2>
-                  <h3 className="lg:mb-4">không chỉ là một cột mốc,</h3>
-                  <h3 className="lg:mb-6">mà là cả một câu chuyện dài đầy cảm hứng.</h3>
-                </div>
-                <div className="w-20 h-1 bg-white mx-auto mb-3 lg:mb-6 rouned-full opacity-80"></div>
-                <div className="mx-auto space-y-3/90">
-                  <p className="text-md lg:text-xl">Là tình yêu dành cho sách được nuôi dưỡng qua từng mùa hội.</p>
-                  <p className="text-md lg:text-xl">Là những thế hệ gặp nhau, gắn kết với bằng tri thức và niềm hăng say</p>
-                  <p className="text-md lg:text-xl mb-4">Là biết bao giấc mơ âm thầm được ươm mầm để rồi bừng nở đầy rực rỡ</p>
-                  <p className="text-md lg:text-xl">Và tụi mình tin rằng...</p>
-                  <p className="text-md lg:text-xl">Hành trình này vẫn sẽ tiếp tục - với nhiều điều bí ẩn đang chờ phía trước.</p>
-                  <p className="text-md lg:text-xl">Tụi mình sẽ đi - bằng tất cả đam mê và cả niềm tin vào những điều tốt đẹp. với tụi mình, mỗi mùa hội sách không chỉ là sự kiện - mà là một lời hẹn. Với tri thức. Với cộng đồng. Và với chính những giấc mơ thuở đầu.</p>
-                </div>
-              </div> */}
             </div>
           </div>
         </section>
         {/* <a href="#" className="inline-block bg-[#00724D] text-white py-3 px-8 rounded-full font-bold text-lg shadow-lg hover:shadow-xl transform transition-all duration-300 hover:-translate-y-1 mb-12">
           Quay lại đầu trang
         </a> */}
+        <section id="footer">
+          <Footer />
+        </section>
       </div>
       <div className="fixed bottom-4 right-4 z-50">
         <button 
           onClick={() => {
             window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
+              top: 0,
+              behavior: 'smooth'
             });
           }}
           className="bg-[#00724D] hover:bg-[#00724D]/90 text-white py-3 px-3 rounded-full font-bold text-lg shadow-lg hover:shadow-xl transform transition-all duration-300 hover:-translate-y-1 flex items-center justify-center"
@@ -2431,7 +2418,6 @@ export default function Journey() {
           </svg>
         </button>
       </div>
-      <Footer />
     </div>
   )
 }
