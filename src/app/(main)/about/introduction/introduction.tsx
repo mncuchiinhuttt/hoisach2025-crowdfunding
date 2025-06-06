@@ -69,7 +69,7 @@ export default function Introduction() {
             {isPlaying ? <Pause size={20} /> : <Play size={20} />}
           </button>
           
-          <div className="absolute bottom-0 left-[30%] right-[30%] flex flex-col items-center pb-36 lg:pb-24 md:pb-16 animate-bounce">
+          <div className="absolute bottom-0 left-[30%] right-[30%] flex-col items-center pb-36 lg:pb-24 md:pb-16 animate-bounce md:flex hidden">
             <p className="text-white text-sm bg-black/40 px-3 py-1 rounded-full font-medium">
               Cuộn xuống để xem thêm
             </p>
@@ -132,137 +132,67 @@ export default function Introduction() {
             </div>
 
             <div className="text-center">
-              <h2 className="lg:text-7xl text-6xl font-black text-[#F5AF28] mb-12 lg:mt-24 mt-12">ĐỐI TÁC ĐỒNG HÀNH</h2>
+              <h2 className="lg:text-7xl md:text-5xl sm:text-4xl text-3xl font-black text-[#F5AF28] mb-4 md:mb-12 lg:mt-24 mt-12">ĐỐI TÁC ĐỒNG HÀNH</h2>
             </div>
 
           </div>
-          <div className="relative overflow-hidden py-10">
-            <div className="flex items-center space-x-12 animate-marquee hover:pause-animation will-change-transform">
-              <div className="flex-shrink-0">
-                <img src="/logo1_1.png" alt="Alpha Books" className="h-24 object-contain" />
+            <div className="relative overflow-hidden py-4 md:py-6 lg:py-10">
+            <div className="flex items-center space-x-4 md:space-x-8 lg:space-x-12 animate-marquee hover:pause-animation will-change-transform">
+              {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((num) => (
+              <div key={`logo1_${num}`} className="flex-shrink-0">
+                <img 
+                src={`/logo1_${num}.png`} 
+                alt={`Partner ${num}`} 
+                className={`h-12 sm:h-16 md:h-20 lg:h-24 object-contain ${[3, 4, 5].includes(num) ? 'scale-[1.3] sm:scale-[1.5] md:scale-[1.7]' : ''}`} 
+                />
               </div>
-              <div className="flex-shrink-0">
-                <img src="/logo1_2.png" alt="Ami" className="h-24 object-contain" />
+              ))}
+              {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((num) => (
+              <div key={`logo1_${num}_dup`} className="flex-shrink-0">
+                <img 
+                src={`/logo1_${num}.png`} 
+                alt={`Partner ${num}`} 
+                className={`h-12 sm:h-16 md:h-20 lg:h-24 object-contain ${[3, 4, 5].includes(num) ? 'scale-[1.3] sm:scale-[1.5] md:scale-[1.7]' : ''}`} 
+                />
               </div>
-              <div className="flex-shrink-0">
-                <img src="/logo1_3.png" alt="AnBooks" className="scale-170 h-24 object-contain" />
-              </div>
-              <div className="flex-shrink-0">
-                <img src="/logo1_4.png" alt="BizEduco" className="scale-170 h-24 object-contain" />
-              </div>
-              <div className="flex-shrink-0">
-                <img src="/logo1_5.png" alt="Cham Cafe" className="scale-170 h-24 object-contain" />
-              </div>
-              <div className="flex-shrink-0">
-                <img src="/logo1_6.png" alt="VP Milk" className="h-24 object-contain" />
-              </div>
-              <div className="flex-shrink-0">
-                <img src="/logo1_7.png" alt="THBT" className="h-24 object-contain" />
-              </div>
-              <div className="flex-shrink-0">
-                <img src="/logo1_8.png" alt="Tergus" className="h-24 object-contain" />
-              </div>
-              <div className="flex-shrink-0">
-                <img src="/logo1_9.png" alt="Sense City" className="h-24 object-contain" />
-              </div>
-              <div className="flex-shrink-0">
-                <img src="/logo1_10.png" alt="Saigon Tam Duc" className="h-24 object-contain" />
-              </div>
-              <div className="flex-shrink-0">
-                <img src="/logo1_1.png" alt="Alpha Books" className="h-24 object-contain" />
-              </div>
-              <div className="flex-shrink-0">
-                <img src="/logo1_2.png" alt="Ami" className="h-24 object-contain" />
-              </div>
-              <div className="flex-shrink-0">
-                <img src="/logo1_3.png" alt="AnBooks" className="scale-170 h-24 object-contain" />
-              </div>
-              <div className="flex-shrink-0">
-                <img src="/logo1_4.png" alt="BizEduco" className="scale-170 h-24 object-contain" />
-              </div>
-              <div className="flex-shrink-0">
-                <img src="/logo1_5.png" alt="Cham Cafe" className="scale-170 h-24 object-contain" />
-              </div>
-              <div className="flex-shrink-0">
-                <img src="/logo1_6.png" alt="VP Milk" className="h-24 object-contain" />
-              </div>
-              <div className="flex-shrink-0">
-                <img src="/logo1_7.png" alt="THBT" className="h-24 object-contain" />
-              </div>
-              <div className="flex-shrink-0">
-                <img src="/logo1_8.png" alt="Tergus" className="h-24 object-contain" />
-              </div>
-              <div className="flex-shrink-0">
-                <img src="/logo1_9.png" alt="Sense City" className="h-24 object-contain" />
-              </div>
-              <div className="flex-shrink-0">
-                <img src="/logo1_10.png" alt="Saigon Tam Duc" className="h-24 object-contain" />
-              </div>
+              ))}
             </div>
 
-            <div className="flex items-center space-x-12 animate-marquee-reverse hover:pause-animation will-change-transform mt-12">
-              <div className="flex-shrink-0">
-                <img src="/logo2_10.png" alt="Partner 10" className="h-24 object-contain" />
-              </div>
-              <div className="flex-shrink-0">
-                <img src="/logo2_8.png" alt="Partner 8" className="h-24 object-contain" />
-              </div>
-              <div className="flex-shrink-0">
-                <img src="/logo2_6.png" alt="Partner 6" className="scale-150 h-24 object-contain" />
-              </div>
-              <div className="flex-shrink-0">
-                <img src="/logo2_4.png" alt="Partner 4" className="scale-130 h-24 object-contain" />
-              </div>
-              <div className="flex-shrink-0">
-                <img src="/logo2_5.png" alt="Partner 5" className="scale-130 h-24 object-contain" />
-              </div>
-              <div className="flex-shrink-0">
-                <img src="/logo2_3.png" alt="Partner 3" className="scale-350 h-24 object-contain" />
-              </div>
-              <div className="flex-shrink-0">
-                <img src="/logo2_2.png" alt="Partner 2" className="h-24 object-contain" />
-              </div>
-              <div className="flex-shrink-0">
-                <img src="/logo2_1.png" alt="Partner 1" className="h-24 object-contain" />
-              </div>
-              <div className="flex-shrink-0">
-                <img src="/logo2_7.png" alt="Partner 7" className="h-24 object-contain" />
-              </div>
-              <div className="flex-shrink-0">
-                <img src="/logo2_9.png" alt="Partner 9" className="h-24 object-contain" />
-              </div>
-              <div className="flex-shrink-0">
-                <img src="/logo2_10.png" alt="Partner 10" className="h-24 object-contain" />
-              </div>
-              <div className="flex-shrink-0">
-                <img src="/logo2_8.png" alt="Partner 8" className="h-24 object-contain" />
-              </div>
-              <div className="flex-shrink-0">
-                <img src="/logo2_6.png" alt="Partner 6" className="scale-150 h-24 object-contain" />
-              </div>
-              <div className="flex-shrink-0">
-                <img src="/logo2_4.png" alt="Partner 4" className="scale-130 h-24 object-contain" />
-              </div>
-              <div className="flex-shrink-0">
-                <img src="/logo2_5.png" alt="Partner 5" className="scale-130 h-24 object-contain" />
-              </div>
-              <div className="flex-shrink-0">
-                <img src="/logo2_3.png" alt="Partner 3" className="scale-350 h-24 object-contain" />
-              </div>
-              <div className="flex-shrink-0">
-                <img src="/logo2_2.png" alt="Partner 2" className="h-24 object-contain" />
-              </div>
-              <div className="flex-shrink-0">
-                <img src="/logo2_1.png" alt="Partner 1" className="h-24 object-contain" />
-              </div>
-              <div className="flex-shrink-0">
-                <img src="/logo2_7.png" alt="Partner 7" className="h-24 object-contain" />
-              </div>
-              <div className="flex-shrink-0">
-                <img src="/logo2_9.png" alt="Partner 9" className="h-24 object-contain" />
-              </div>
+            <div className="flex items-center space-x-4 md:space-x-8 lg:space-x-12 animate-marquee-reverse hover:pause-animation will-change-transform mt-6 md:mt-8 lg:mt-12">
+              {[...Array(10)].map((_, i) => {
+              const num = 10 - i;
+              return (
+                <div key={`logo2_${num}`} className="flex-shrink-0">
+                <img 
+                  src={`/logo2_${num}.png`} 
+                  alt={`Partner ${num}`} 
+                  className={`h-12 sm:h-16 md:h-20 lg:h-24 object-contain ${
+                  num === 6 ? 'scale-[1.2] sm:scale-[1.3] md:scale-[1.5]' : 
+                  num === 3 ? 'scale-[2] sm:scale-[2.5] md:scale-[3.5]' : 
+                  [4, 5].includes(num) ? 'scale-[1.1] sm:scale-[1.2] md:scale-[1.3]' : ''
+                  }`} 
+                />
+                </div>
+              );
+              })}
+              {[...Array(10)].map((_, i) => {
+              const num = 10 - i;
+              return (
+                <div key={`logo2_${num}_dup`} className="flex-shrink-0">
+                <img 
+                  src={`/logo2_${num}.png`} 
+                  alt={`Partner ${num}`} 
+                  className={`h-12 sm:h-16 md:h-20 lg:h-24 object-contain ${
+                  num === 6 ? 'scale-[1.2] sm:scale-[1.3] md:scale-[1.5]' : 
+                  num === 3 ? 'scale-[2] sm:scale-[2.5] md:scale-[3.5]' : 
+                  [4, 5].includes(num) ? 'scale-[1.1] sm:scale-[1.2] md:scale-[1.3]' : ''
+                  }`} 
+                />
+                </div>
+              );
+              })}
             </div>
-          </div>
+            </div>
         </div>
       </div>
     </div>

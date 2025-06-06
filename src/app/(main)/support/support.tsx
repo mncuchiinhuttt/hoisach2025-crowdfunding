@@ -206,7 +206,7 @@ export default function Support({
                 <p className="font-bold text-[#00724D] text-xl sm:text-2xl md:text-3xl">Nếu có bất kỳ trục trặc nào, hãy liên hệ qua</p>
                 <ul className="list-disc pl-6 mt-3 text-lg sm:text-xl md:text-2xl">
                   <li>Email: <a className="font-semibold" href="mailto:doingoai.hoisach@gmail.com">doingoai.hoisach@gmail.com</a></li>
-                  <li>Facebook: <span className="font-semibold"><a href="https://www.facebook.com/hoisachmohoimo">Hoi Sach Mo Hoi Mo</a></span></li>
+                  <li>Facebook: <span className="font-semibold"><a href="https://www.facebook.com/hoisachmohoimo">Hội Sách Mơ Hỏi Mở</a></span></li>
                 </ul>
               </div>
             </div>
