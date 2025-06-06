@@ -43,7 +43,7 @@ export default function NewsPage() {
 	  link: "https://thanhnien.vn/ngay-hoi-sach-mo-hoi-mo-va-cuoc-thi-tom-sach-danh-cho-hoc-sinh-ben-tre-185230718154252475.htm",
 	},
 	{
-	  title: "Phát động cuộc thi 'Tôm sách' cho thí sinh Bến Tre",
+	  title: "Phát động cuộc thi 'Tóm sách' cho thí sinh Bến Tre",
 	  source: "Báo Tiền Phong",
 	  link: "https://svvn.tienphong.vn/phat-dong-cuoc-thi-tom-sach-cho-thi-sinh-ben-tre-post1552408.tpo",
 	},
