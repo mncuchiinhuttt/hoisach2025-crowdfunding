@@ -24,7 +24,30 @@ export default function Journey() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [isPageChanging, setIsPageChanging] = useState<boolean>(false);
-  const imagesPerPage = 6;
+  const imagesPerPage = typeof window !== 'undefined' && window.innerWidth < 768 ? 2 : 6;
+  const [windowWidth, setWindowWidth] = useState<number>(
+    typeof window !== 'undefined' ? window.innerWidth : 1200
+  );
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+    
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  // Update imagesPerPage when window width changes
+  useEffect(() => {
+    // Don't run on server-side
+    if (typeof window !== 'undefined') {
+      // Adjust images per page based on screen size
+      if (windowWidth < 768) {
+        setCurrentPage(1); // Reset to first page when switching to mobile
+      }
+    }
+  }, [windowWidth]);
   
   const season3Images = [
     { src: "/journey-materials/ss3/ss3-1.jpg", alt: "Mùa 3 - Ảnh 1" },
@@ -2015,7 +2038,7 @@ export default function Journey() {
                           </DialogClose>
                         </div>
                         <div className="p-6 pt-4 overflow-y-auto flex-grow max-h-[calc(90vh-80px)]">
-                          <div className="relative"> {/* Minimum height to prevent layout shift */}
+                          <div className="relative">
                             <div className={`grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 transition-opacity duration-300 ${isPageChanging ? 'opacity-0' : 'opacity-100'}`}>
                               {season3Images
                                 .slice((currentPage - 1) * imagesPerPage, currentPage * imagesPerPage)
