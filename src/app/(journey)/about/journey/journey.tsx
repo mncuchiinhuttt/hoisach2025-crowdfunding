@@ -2402,7 +2402,7 @@ export default function Journey() {
           {/* <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[#FEF9DB]/30 to-transparent w-full"></div> */}
         </section>
         
-        <section id="final" className="journey-future bg-gradient-to-b from-white to-[#FEF9DB]/30" data-speed="1.0">
+        {/* <section id="final" className="journey-future bg-gradient-to-b from-white to-[#FEF9DB]/30" data-speed="1.0">
           <div className="max-w-6xl mx-auto px-4">
             <div className="rounded-xl">
               <img 
@@ -2417,7 +2417,8 @@ export default function Journey() {
               />
             </div>
           </div>
-        </section>
+        </section> */}
+
         {/* <a href="#" className="inline-block bg-[#00724D] text-white py-3 px-8 rounded-full font-bold text-lg shadow-lg hover:shadow-xl transform transition-all duration-300 hover:-translate-y-1 mb-12">
           Quay lại đầu trang
         </a> */}
