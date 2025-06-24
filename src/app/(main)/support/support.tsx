@@ -212,13 +212,12 @@ export default function Support({
             </div>
 
             <div className="lg:w-2/5 flex items-end justify-center mt-auto">
-              <Image 
+              <img 
                 src="/support_1.png" 
-                alt="Ủng Hộ Mở Hỏi Mở" 
+                alt="Ủng Hộ Mơ Hỏi Mở" 
                 width={500} 
                 height={400}
-                className="object-contain relative rounded-lg"
-                priority
+                className="object-contain relative shadow-none"
               />
             </div>
           </div>
