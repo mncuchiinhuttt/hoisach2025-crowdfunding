@@ -33,17 +33,17 @@ export function NavigationBar() {
   const activityItems = [
     {
       title: "Lịch trình sự kiện",
-      href: "/activities/schedule",
+      href: "/activities",
       description: "Theo dấu lịch trình để không bỏ lỡ bất kỳ \“kho báu\" nào trong chuyến phiêu lưu cùng “Mơ Hỏi Mở” nhé",
     },
     {
       title: "Sơ đồ tổng quan",
-      href: "/activities/overview",
+      href: "/activities",
       description: "Bản đồ này sẽ đưa bạn ghé thăm từng góc nhỏ thân thương của Mơ Hỏi Mở",
     },
     {
       title: "Đêm nhạc",
-      href: "/activities/music-night",
+      href: "/activities",
       description: "Khi ngày tắt nắng, hãy ghé lại sân khấu đặc biệt của \"Mơ Hỏi Mở\" - nơi âm nhạc lên tiếng và trái tim cùng nhau hát vang.",
     }
   ];

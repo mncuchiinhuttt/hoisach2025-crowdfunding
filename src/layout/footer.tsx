@@ -49,7 +49,7 @@ export function Footer() {
           
           <div className="w-full md:w-1/5 flex items-center justify-center md:justify-end">
             <img
-              src="/footer.png"
+              src="/footer.webp"
               alt="Mơ Hỏi Mở Characters"
               className="object-contain h-full w-auto scale-90 md:scale-120 lg:scale-100"
             />
