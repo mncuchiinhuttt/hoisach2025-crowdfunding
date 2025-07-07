@@ -67,7 +67,7 @@ export default function HomeContent() {
           >
             {/* Base layer */}
             <motion.img 
-              src="/poster/1.png"
+              src="/poster/1.webp"
               alt="Mơ Hỏi Mở Poster - Layer 1"
               className="w-full h-auto"
               initial={{ opacity: 0, y: -30 }}
@@ -77,7 +77,7 @@ export default function HomeContent() {
 
             {/* Layer 2 */}
             <motion.img 
-              src="/poster/2.png"
+              src="/poster/2.webp"
               alt="Mơ Hỏi Mở Poster - Layer 2"
               className="w-full h-auto absolute top-0 left-0"
               initial={{ opacity: 0, y: -50 }}
@@ -87,7 +87,7 @@ export default function HomeContent() {
 
             {/* Layer 3 */}
             <motion.img 
-              src="/poster/3.png"
+              src="/poster/3.webp"
               alt="Mơ Hỏi Mở Poster - Layer 3"
               className="w-full h-auto absolute top-0 left-0"
               initial={{ opacity: 0, y: -70 }}
@@ -97,7 +97,7 @@ export default function HomeContent() {
 
             {/* Layer 4 */}
             <motion.img 
-              src="/poster/4.png"
+              src="/poster/4.webp"
               alt="Mơ Hỏi Mở Poster - Layer 4"
               className="w-full h-auto absolute top-0 left-0"
               initial={{ opacity: 0, y: -90 }}
@@ -107,7 +107,7 @@ export default function HomeContent() {
 
             {/* Layer 5 */}
             <motion.img 
-              src="/poster/5.png"
+              src="/poster/5.webp"
               alt="Mơ Hỏi Mở Poster - Layer 5"
               className="w-full h-auto absolute top-0 left-0"
               initial={{ opacity: 0, y: -110 }}
@@ -150,7 +150,7 @@ export default function HomeContent() {
         className="w-full relative 2xl:-mt-32 lg:-mt-24 md:-mt-12 -mt-6"
       >
         <Image
-          src="/home_1.png"
+          src="/home_1.webp"
           alt="Mở Hỏi Mở Illustration"
           width={1200}
           height={600}
