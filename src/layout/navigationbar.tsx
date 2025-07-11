@@ -40,11 +40,6 @@ export function NavigationBar() {
       title: "Sơ đồ tổng quan",
       href: "/activities",
       description: "Bản đồ này sẽ đưa bạn ghé thăm từng góc nhỏ thân thương của Mơ Hỏi Mở",
-    },
-    {
-      title: "Đêm nhạc",
-      href: "/activities",
-      description: "Khi ngày tắt nắng, hãy ghé lại sân khấu đặc biệt của \"Mơ Hỏi Mở\" - nơi âm nhạc lên tiếng và trái tim cùng nhau hát vang.",
     }
   ];
 
