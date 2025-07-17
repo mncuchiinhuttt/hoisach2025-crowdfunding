@@ -38,7 +38,7 @@ export function NavigationBar() {
     },
     {
       title: "Sơ đồ tổng quan",
-      href: "/activities",
+      href: "/activities#map",
       description: "Bản đồ này sẽ đưa bạn ghé thăm từng góc nhỏ thân thương của Mơ Hỏi Mở",
     }
   ];
