@@ -11,8 +11,13 @@ if (typeof window !== "undefined") {
 
 export default function ActivitiesContent() {
   return (
-    <div>
-      <img src="/maps.webp" alt="Description" />
-    </div>
+    <>
+      <section>
+        <img src="/timeline.webp" alt="Description" />
+      </section>
+      <section id="map">
+        <img src="/maps.webp" alt="Description" />
+      </section>
+    </>
   );
 }
